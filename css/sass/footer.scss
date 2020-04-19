@@ -1,0 +1,177 @@
+footer {
+  margin: 0;
+  color: $color-bg;
+  padding: 20px 10px 30px;
+  background: $color-main;
+
+  .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
+    @include breakpoint(desktop) {
+      text-align: left;
+      justify-content: space-between;
+    }
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: $txt-s;
+    line-height: 20px;
+  }
+
+  a {
+    color: $color-bg;
+
+    &:hover {
+      color: $color-second;
+    }
+  }
+
+  .fanosa-phone {
+    display: block;
+    font-size: 20px;
+    line-height: 30px;
+
+    &:before {
+      height: 17px;
+      background-image: url("../images/phone-icon-white.svg");
+    }
+
+    @include breakpoint(desktop) {
+      padding-right: 0;
+    }
+  }
+}
+
+.footer-left,
+.footer-right {
+  width: 100%;
+
+  @include breakpoint(desktop) {
+    width: 420px;
+  }
+}
+
+.footer-left {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+
+  @include breakpoint(desktop) {
+    justify-content: space-between;
+  }
+}
+
+.footer-right {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  @include breakpoint(desktop) {
+    justify-content: flex-end;
+  }
+}
+
+.footer-logo {
+  width: 100%;
+  height: 40px;
+  align-self: center;
+  margin-bottom: 20px;
+
+  @include breakpoint(desktop) {
+    width: 155px;
+  }
+
+  img {
+    max-height: 100%;
+  }
+}
+
+.footer-menu-box {
+  width: 100%;
+  max-width: 300px;
+  margin-bottom: 20px;
+
+  @include breakpoint(desktop) {
+    width: 100px;
+    margin-bottom: 0;
+  }
+}
+
+.footer-social {
+  width: 120px;
+  height: 33px;
+  flex-wrap: wrap;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+
+  a {
+    opacity: 1;
+    width: 30px;
+    height: 18px;
+    overflow: hidden;
+    text-indent: 9999px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: $transition;
+
+    &.social-fb {
+      background-image: url("../images/social-fb.svg");
+    }
+
+    &.social-li {
+      background-image: url("../images/social-li.svg");
+    }
+
+    &.social-yt {
+      background-image: url("../images/social-yt.svg");
+      background-size: 23px;
+    }
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+}
+
+.footer-legal {
+  width: 100%;
+  font-size: 12px;
+  margin-top: 10px;
+
+  @include breakpoint(desktop) {
+    text-align: right;
+  }
+
+  a.active {
+    color: $color-second;
+  }
+}
+
+.footer-privacidad {
+  margin-left: 15px;
+}
+
+.footer-lang {
+  @extend .header-lang;
+  display: inline;
+
+  color: $color-bg;
+
+  a {
+    color: $color-bg;
+
+    &:hover {
+      color: $color-second;
+    }
+  }
+}

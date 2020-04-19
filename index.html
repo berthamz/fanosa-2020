@@ -1,9 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Fanosa</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <script type="text/javascript" src="js/jquery-3.5.0.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/carousel.js"></script>
+    <script type="text/javascript" src="js/include.js"></script>
   </head>
-  <body></body>
+
+  <header w3-include-html="header.html"></header>
+
+  <body>
+    esto es el body
+
+    <footer w3-include-html="footer.html"></footer>
+
+    <script>
+      includeHTML();
+    </script>
+  </body>
 </html>

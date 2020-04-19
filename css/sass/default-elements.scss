@@ -1,0 +1,21 @@
+h4 {
+  margin: 0 0 10px;
+}
+
+a {
+  color: $color-main;
+  text-decoration: none;
+  transition: $transition;
+
+  &:hover {
+    color: $color-second;
+  }
+}
+
+.orange {
+  color: $color-second;
+}
+
+.blue {
+  color: $color-main;
+}

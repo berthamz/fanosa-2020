@@ -1,0 +1,27 @@
+// VARIABLES //
+$font-title: "Montserrat", sans-serif;
+$font-body: "Source Sans Pro", sans-serif;
+
+$txt-s: 12px;
+$txt-r: 16px;
+$txt-m: 20px;
+$txt-l: 28px;
+$txt-xl: 36px;
+
+$color-bg: #ffffff;
+$color-body: #f1f1f1;
+$color-text: #4b4f53;
+$color-main: #2a66b1;
+$color-second: #ed7f22;
+
+$transition: all ease 0.25s;
+
+// MIXINS //
+
+@mixin breakpoint($point, $value: 0) {
+  @if $point == desktop {
+    @media (min-width: 1024px) {
+      @content;
+    }
+  }
+}

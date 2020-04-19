@@ -1,0 +1,16 @@
+body {
+  margin: 0;
+  padding-top: 50px;
+  background: $color-body;
+  font: 400 $txt-r $font-body;
+
+  @include breakpoint(desktop) {
+    padding-top: 0;
+  }
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 1020px;
+  width: calc(100% - 20px);
+}
