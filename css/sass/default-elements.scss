@@ -54,6 +54,10 @@ img {
   color: $color-main;
 }
 
+.white {
+  color: $color-bg;
+}
+
 .grey-bg {
   background-color: $color-body;
 }
@@ -84,5 +88,16 @@ img {
   &:hover {
     color: $color-bg;
     background: darken($color-text, 10%);
+  }
+}
+
+.vertical-align {
+  display: flex;
+  align-items: center;
+}
+
+.right-desktop {
+  @include breakpoint(desktop) {
+    text-align: right;
   }
 }

@@ -16,19 +16,21 @@
 }
 
 .wrapper-half {
+  margin: 0 auto;
   min-width: 300px;
 
   @include breakpoint(desktop) {
+    margin: 0;
     width: 47%;
   }
 }
 
 .wrapper-half-small {
-  padding: 0 10px;
   min-width: 300px;
 
   @include breakpoint(desktop) {
     width: 40%;
+    padding: 0 10px;
   }
 }
 
@@ -47,6 +49,10 @@
     height: 100%;
     object-fit: cover;
     position: absolute;
+  }
+
+  .wrapper {
+    flex-direction: column;
   }
 
   .page-top-text {
@@ -70,5 +76,10 @@
 
   &.no-margin {
     margin-bottom: 0;
+  }
+
+  p {
+    margin: 0;
+    width: 200px;
   }
 }

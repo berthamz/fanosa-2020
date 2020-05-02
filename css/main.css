@@ -42,6 +42,9 @@ img {
 .blue {
   color: #2a66b1; }
 
+.white {
+  color: #ffffff; }
+
 .grey-bg {
   background-color: #f1f1f1; }
 
@@ -67,6 +70,14 @@ img {
     color: #ffffff;
     background: #333638; }
 
+.vertical-align {
+  display: flex;
+  align-items: center; }
+
+@media (min-width: 1024px) {
+  .right-desktop {
+    text-align: right; } }
+
 .wrapper {
   margin: 0 auto;
   max-width: 800px;
@@ -81,17 +92,19 @@ img {
     justify-content: center; }
 
 .wrapper-half {
+  margin: 0 auto;
   min-width: 300px; }
   @media (min-width: 1024px) {
     .wrapper-half {
+      margin: 0;
       width: 47%; } }
 
 .wrapper-half-small {
-  padding: 0 10px;
   min-width: 300px; }
   @media (min-width: 1024px) {
     .wrapper-half-small {
-      width: 40%; } }
+      width: 40%;
+      padding: 0 10px; } }
 
 .page-top {
   width: 100%;
@@ -107,6 +120,8 @@ img {
     height: 100%;
     object-fit: cover;
     position: absolute; }
+  .page-top .wrapper {
+    flex-direction: column; }
   .page-top .page-top-text {
     z-index: 2;
     width: 100%;
@@ -123,6 +138,9 @@ img {
         max-width: 600px; } }
   .page-top.no-margin {
     margin-bottom: 0; }
+  .page-top p {
+    margin: 0;
+    width: 200px; }
 
 header {
   top: 0;
@@ -582,7 +600,7 @@ footer {
 .contact-box {
   z-index: 1;
   position: relative;
-  padding: 50px 0 20px;
+  padding: 50px 0 30px;
   background: #f1f1f1; }
   @media (min-width: 1024px) {
     .contact-box.no-padding {
@@ -1250,5 +1268,94 @@ footer {
     width: 120px;
     display: block;
     margin: -75px auto 20px; }
+
+.sustentable-03 {
+  padding: 30px 0 0; }
+  @media (min-width: 1024px) {
+    .sustentable-03 {
+      padding: 80px 0 30px; } }
+  .sustentable-03 img {
+    width: 100%;
+    display: block;
+    margin: 0 auto 0;
+    max-height: 450px; }
+    @media (min-width: 1024px) {
+      .sustentable-03 img {
+        margin-top: -100px; } }
+
+.experiencia-01 .wrapper-half-small {
+  padding-bottom: 40px; }
+.experiencia-01 iframe {
+  border-radius: 20px; }
+  @media (min-width: 1024px) {
+    .experiencia-01 iframe {
+      height: 400px; } }
+.experiencia-01 .iframe-text {
+  width: 100%; }
+.experiencia-01 h2 {
+  margin-bottom: 0;
+  font-size: calc(28px - 1px); }
+
+.experiencia-02 {
+  background: linear-gradient(#ffffff 50%, #f1f1f1 50%); }
+  .experiencia-02 .wrapper {
+    max-width: 700px;
+    color: #ffffff;
+    padding: 20px 10px;
+    border-radius: 20px;
+    text-align: center;
+    flex-direction: column;
+    background: #2a66b1;
+    width: calc(100% - 40px); }
+    @media (min-width: 1024px) {
+      .experiencia-02 .wrapper {
+        width: 800px;
+        max-width: none;
+        padding: 30px 50px 20px; } }
+    .experiencia-02 .wrapper h1 {
+      width: 100%;
+      margin-bottom: 0; }
+  .experiencia-02 p {
+    max-width: 480px;
+    margin: 10px auto; }
+
+.experiencia-logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly; }
+  .experiencia-logos img {
+    width: 80px;
+    margin: 20px; }
+
+.experiencia-03 {
+  padding: 40px 0 30px;
+  background: linear-gradient(#f1f1f1 80%, #ffffff 80%); }
+  .experiencia-03 img {
+    width: 410px;
+    height: 250px;
+    display: block;
+    margin: 20px auto;
+    border-radius: 20px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+    max-width: calc(100% - 20px);
+    background-color: #4b4f53; }
+    @media (min-width: 1024px) {
+      .experiencia-03 img {
+        height: 300px;
+        margin: 0 0 0 -40px; } }
+
+.experiencia-04 {
+  justify-content: space-evenly; }
+  @media (min-width: 1024px) {
+    .experiencia-04 {
+      justify-content: space-between; } }
+  .experiencia-04 .experiencia-04-col {
+    width: 100%;
+    max-width: 240px;
+    text-align: center;
+    margin: 0 10px 30px; }
+    @media (min-width: 1024px) {
+      .experiencia-04 .experiencia-04-col {
+        text-align: left; } }
 
 /*# sourceMappingURL=main.css.map */

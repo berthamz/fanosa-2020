@@ -1,0 +1,104 @@
+.experiencia-01 {
+  .wrapper-half-small {
+    padding-bottom: 40px;
+  }
+
+  iframe {
+    border-radius: $br;
+
+    @include breakpoint(desktop) {
+      height: 400px;
+    }
+  }
+
+  .iframe-text {
+    width: 100%;
+  }
+
+  h2 {
+    margin-bottom: 0;
+    font-size: calc(#{$txt-l} - 1px);
+  }
+}
+
+.experiencia-02 {
+  background: linear-gradient($color-bg 50%, $color-body 50%);
+
+  .wrapper {
+    max-width: 700px;
+    color: $color-bg;
+    padding: 20px 10px;
+    border-radius: $br;
+    text-align: center;
+    flex-direction: column;
+    background: $color-main;
+    width: calc(100% - 40px);
+
+    @include breakpoint(desktop) {
+      width: 800px;
+      max-width: none;
+      padding: 30px 50px 20px;
+    }
+
+    h1 {
+      width: 100%;
+      margin-bottom: 0;
+    }
+  }
+
+  p {
+    max-width: 480px;
+    margin: 10px auto;
+  }
+}
+
+.experiencia-logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+
+  img {
+    width: 80px;
+    margin: 20px;
+  }
+}
+
+.experiencia-03 {
+  padding: 40px 0 30px;
+  background: linear-gradient($color-body 80%, $color-bg 80%);
+
+  img {
+    width: 410px;
+    height: 250px;
+    display: block;
+    margin: 20px auto;
+    border-radius: $br;
+    box-shadow: $img-shadow;
+    max-width: calc(100% - 20px);
+    background-color: $color-text;
+
+    @include breakpoint(desktop) {
+      height: 300px;
+      margin: 0 0 0 -40px;
+    }
+  }
+}
+
+.experiencia-04 {
+  justify-content: space-evenly;
+
+  @include breakpoint(desktop) {
+    justify-content: space-between;
+  }
+
+  .experiencia-04-col {
+    width: 100%;
+    max-width: 240px;
+    text-align: center;
+    margin: 0 10px 30px;
+
+    @include breakpoint(desktop) {
+      text-align: left;
+    }
+  }
+}
