@@ -1,0 +1,193 @@
+.calculadora-resultados {
+  .division {
+    width: 100%;
+    min-height: 80px;
+    padding: 25px 10px;
+    position: relative;
+    border-top: 1px solid $color-text;
+
+    @include breakpoint(desktop) {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 25px 50px;
+    }
+  }
+
+  .explicacion,
+  .resultado {
+    width: 100%;
+    padding: 20px 0;
+    font-style: italic;
+    text-align: center;
+
+    @include breakpoint(desktop) {
+      text-align: left;
+    }
+  }
+  .explicacion {
+    @include breakpoint(desktop) {
+      width: 250px;
+      padding: 0 20px;
+    }
+  }
+  .resultado {
+    text-align: center;
+    vertical-align: top;
+    border-top: 1px solid $color-text;
+
+    @include breakpoint(desktop) {
+      width: 140px;
+      border-top: 0;
+      padding: 5px 15px;
+      border-left: 1px solid $color-text;
+    }
+
+    span {
+      display: block;
+    }
+  }
+
+  &.final {
+    position: relative;
+    padding-left: 0;
+    padding-right: 100px;
+
+    .significado {
+      width: 750px;
+      p {
+        width: 100%;
+        margin-top: 10px;
+      }
+    }
+
+    .iconos {
+      height: 145px;
+      padding-top: 25px;
+      width: 100%;
+      background: url("../images/calculadora-iconos.png") no-repeat right center;
+      margin: 20px auto;
+
+      div {
+        width: 180px;
+        color: $color-second;
+        font-weight: bold;
+        padding-top: 25px;
+        padding-left: 40px;
+        font-size: 13px;
+        text-align: right;
+        display: inline-block;
+        vertical-align: bottom;
+
+        &:first-of-type {
+          display: block;
+        }
+      }
+
+      .pct {
+        color: black;
+        font-style: italic;
+        font-size: 15px;
+        width: 30px;
+        padding: 0;
+        margin: 0 45px -6px;
+
+        &#pct-gasto {
+          margin-left: 310px;
+        }
+
+        &#pct-ahorro {
+        }
+      }
+    }
+  }
+
+  .btn-grey {
+    margin: 20px auto;
+
+    @include breakpoint(desktop) {
+      position: absolute;
+      right: 0;
+      top: 30px;
+    }
+  }
+}
+
+.calculadora-graficas {
+  width: 100%;
+
+  p {
+    font-weight: 600;
+    color: $color-second;
+
+    @include breakpoint(desktop) {
+      width: 200px;
+      margin-left: 40px;
+      text-align: right;
+    }
+  }
+
+  .iconos-resultados {
+    text-align: center;
+
+    @include breakpoint(desktop) {
+      display: flex;
+      text-align: left;
+      align-self: center;
+    }
+  }
+
+  img,
+  .iconos-aislar-img {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .iconos-aislar-img {
+    position: relative;
+    margin: 0 auto;
+
+    @include breakpoint(desktop) {
+      margin: 25px 0 0;
+    }
+
+    img {
+      @include breakpoint(desktop) {
+      }
+    }
+
+    .pct {
+      bottom: 10px;
+      position: absolute;
+      font: italic 700 16px $font-body;
+
+      @include breakpoint(desktop) {
+        bottom: 21px;
+      }
+    }
+
+    #pct-ahorro {
+      right: 195px;
+    }
+
+    #pct-gasto {
+      right: 78px;
+    }
+  }
+}
+
+@media (max-width: 540px) {
+  .calculadora-graficas .iconos-aislar-img {
+    .pct {
+      bottom: 7px;
+      font-size: 3vw;
+    }
+
+    #pct-ahorro {
+      right: 39.5%;
+    }
+
+    #pct-gasto {
+      right: 15.5%;
+    }
+  }
+}

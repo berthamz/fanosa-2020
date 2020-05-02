@@ -1,0 +1,272 @@
+.wrapper.calculadora {
+  @include breakpoint(desktop) {
+    padding: 0 60px;
+    max-width: 900px;
+    width: calc(100% - 140px);
+  }
+}
+.calculadora-top {
+  width: 100%;
+  margin: 40px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  @include breakpoint(desktop) {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+
+  .calculadora-top-text {
+    max-width: 600px;
+    margin-right: 20px;
+
+    @include breakpoint(desktop) {
+      order: 1;
+    }
+  }
+
+  img {
+    @include breakpoint(desktop) {
+      order: 2;
+    }
+  }
+}
+
+.calculadora {
+  .division {
+    width: 100%;
+    border-top: 1px solid $color-text;
+    min-height: 80px;
+    position: relative;
+    padding: 25px 10px;
+
+    @include breakpoint(desktop) {
+      padding: 25px 50px;
+    }
+
+    .numero {
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      top: -20px;
+      left: 0;
+      background-color: $color-main;
+      color: $color-bg;
+      line-height: 40px;
+      text-align: center;
+      font-style: italic;
+      font-size: 18px;
+      border-radius: 40px;
+    }
+
+    .label-container {
+      width: 100%;
+      font-size: 12px;
+      max-width: 600px;
+      text-align: left;
+      margin: 0 auto 10px;
+
+      @include breakpoint(desktop) {
+        margin: 0 0 10px;
+        text-align: right;
+        max-width: 420px;
+      }
+    }
+
+    .label {
+      max-width: 250px;
+      display: inline-block;
+      vertical-align: top;
+      margin-right: 5px;
+      margin-bottom: 10px;
+      padding-top: 3px;
+    }
+
+    select,
+    input[type="text"] {
+      border: 0;
+      width: 160px;
+      font-size: 12px;
+      margin-top: 3px;
+      border-radius: 0;
+      border-radius: 5px;
+      font-family: $font-body;
+      background-color: $color-body;
+    }
+
+    input[type="text"] {
+      width: 60px;
+
+      @include breakpoint(desktop) {
+        width: 80px;
+      }
+    }
+
+    .casa {
+      right: 0;
+      width: 100%;
+      height: 205px;
+      margin: 0 auto;
+      max-width: 348px;
+      position: initial;
+      background-size: auto 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+
+      @include breakpoint(desktop) {
+        width: 348px;
+        position: absolute;
+      }
+
+      &.casa01 {
+        width: 100%;
+        height: 230px;
+        max-width: 365px;
+        background-image: url("../images/calculadora-perspectiva.png");
+
+        @include breakpoint(desktop) {
+          top: -90px;
+          height: 260px;
+        }
+      }
+      &.casa02 {
+        top: 10px;
+        z-index: 1;
+        background-image: url("../images/calculadora-perspectiva02.png");
+      }
+    }
+
+    &.dos {
+      .label {
+        width: 250px;
+        max-width: 100%;
+      }
+    }
+
+    &.cuatro {
+      height: 420px;
+
+      @include breakpoint(desktop) {
+        height: 270px;
+      }
+
+      .label-container {
+        @include breakpoint(desktop) {
+          max-width: 240px;
+        }
+      }
+
+      span {
+        width: 50px;
+        display: inline-block;
+        margin-bottom: 5px;
+        font-size: 12px;
+        font-weight: bold;
+      }
+
+      .casa03 {
+        height: 320px;
+        position: relative;
+        background: url("../images/calculadora-perspectiva-mobile-03.png") 50%
+          60% no-repeat;
+        background-size: 320px;
+
+        @include breakpoint(desktop) {
+          top: 50px;
+          right: 60px;
+          width: 500px;
+          height: 250px;
+          max-width: none;
+          position: absolute;
+          background-image: url("../images/calculadora-perspectiva03.png");
+          background-size: 340px;
+        }
+      }
+
+      .label {
+        width: 47%;
+        position: absolute;
+
+        @include breakpoint(desktop) {
+          width: auto;
+        }
+
+        &.top {
+          top: 0;
+
+          &:after {
+            content: "";
+            display: block;
+            width: 1px;
+            height: 60px;
+            background: $color-second;
+
+            @include breakpoint(desktop) {
+              display: none;
+            }
+          }
+        }
+
+        &.bottom {
+          bottom: 0;
+
+          &:before {
+            content: "";
+            display: block;
+            width: 1px;
+            height: 100px;
+            background: $color-second;
+
+            @include breakpoint(desktop) {
+              display: none;
+            }
+          }
+        }
+
+        &.left {
+          left: 0;
+
+          &:before,
+          &:after {
+            margin-left: 75%;
+          }
+        }
+
+        &.right {
+          right: 0;
+
+          &:before,
+          &:after {
+            margin-left: 45%;
+          }
+        }
+      }
+    }
+
+    &:last-of-type {
+      text-align: center;
+      @include breakpoint(desktop) {
+        text-align: left;
+      }
+
+      p {
+        font-size: 12px;
+        max-width: 520px;
+        margin: 0 auto 30px;
+
+        @include breakpoint(desktop) {
+          margin: 0 30px 0 0;
+          display: inline-block;
+        }
+      }
+    }
+
+    .btn-calculadora {
+      display: inline-block;
+      margin-left: 10px;
+      border: 0;
+      vertical-align: top;
+    }
+  }
+}

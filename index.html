@@ -4,9 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fanosa</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
     <link rel="stylesheet" href="css/main.css" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap"
       rel="stylesheet"
     />
     <script type="text/javascript" src="js/jquery-3.5.0.min.js"></script>
@@ -15,10 +16,45 @@
     <script type="text/javascript" src="js/include.js"></script>
   </head>
 
-  <header w3-include-html="header.html"></header>
-
   <body>
-    esto es el body
+    <header w3-include-html="header.html"></header>
+
+    <div class="wrapper home-01">
+      <div class="wrapper-half-small">
+        <h1>POR UN PLANETA SUSTENTABLE</h1>
+        <p>
+          Para nosotros la sustentabilidad es una prioridad, conoce nuestra
+          política ambiental, nuestras certificaciones y los compromisos que
+          hemos hecho por tener un planeta más verde.
+        </p>
+        <a href="#" class="btn-orange">Ver más</a>
+      </div>
+      <div class="wrapper-half">
+        <img src="images/home-img01.png" alt="Por un planeta sustentable" />
+      </div>
+    </div>
+
+    <div class="grey-bg home-02">
+      <div class="wrapper">
+        <div class="wrapper-half home-02-txt">
+          <h1 class="white">FANOSA® <br />EN TU OBRA</h1>
+          <p>
+            Si buscas aislar, aligerar o ahorrar, tenemos la solución, encuentra
+            todo lo que necesitas saber acerca de nuestros productos y sistemas
+            constructivos, así como las ventajas que le ofrecen a tus proyectos.
+          </p>
+          <a href="#" class="btn-orange">Conoce más</a>
+        </div>
+        <div class="wrapper-half home-02-img">
+          <img src="images/home-img01.png" alt="Fanosa en tu obra" />
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="contact-box no-padding"
+      w3-include-html="contacto-modulo.html"
+    ></div>
 
     <footer w3-include-html="footer.html"></footer>
 

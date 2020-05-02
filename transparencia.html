@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fanosa</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <script type="text/javascript" src="js/jquery-3.5.0.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/include.js"></script>
+  </head>
+
+  <body>
+    <header w3-include-html="header.html"></header>
+
+    <div class="page-top no-margin">
+      <img src="images/top-transparencia.jpg" alt="Transparencia" />
+      <div class="page-top-text">
+        <div class="wrapper">
+          <h1>Transparencia</h1>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrapper">
+      <div class="bloque-info-forma">
+        <div class="bloque-half">
+          <p>
+            Buscando mejorar la calidad de sus procesos, FANOSA® pone a tu
+            disposición este canal de comunicación anónimo y seguro, en el cual
+            podrás reportar cualquier situación que consideres no cumpla con los
+            niveles de ética y honestidad establecidos por nuestra compañía.
+          </p>
+          <p>
+            Ten la seguridad que tu comentario será totalmente confidencial y
+            tendrán acceso a ella personas que no participan en la operación,
+            quienes tendrán la obligación de iniciar la investigación
+            correspondiente a los hechos revelados y no se dará a conocer
+            información acerca del origen de la misma.
+          </p>
+        </div>
+
+        <div class="bloque-half">
+          <form action="" class="info-forma">
+            <textarea
+              name="comentarios"
+              id="comentarios"
+              cols="40"
+              rows="10"
+              class="info-forma-text"
+              placeholder="Comentarios"
+            ></textarea>
+            <input
+              type="text"
+              name="nombre"
+              id="nombre"
+              class="info-forma-text"
+              placeholder="Nombre (opcional)"
+            />
+            <input
+              type="email"
+              name="correo"
+              id="correo"
+              class="info-forma-text"
+              placeholder="Correo (opcional)"
+            />
+            <input
+              type="text"
+              name="plaza"
+              id="plaza"
+              class="info-forma-text"
+              placeholder="Plaza (opcional)"
+            />
+            <span class="checkbox-privacidad"
+              ><input
+                type="checkbox"
+                name="privacidad"
+                id="checkbox-privacidad"
+              />
+              Acepto las
+              <a href="privacidad.html">Políticas de Privacidad</a></span
+            >
+            <input type="submit" value="Enviar" class="btn-orange" />
+          </form>
+        </div>
+      </div>
+
+      <div class="transparencia-otras">
+        <h2 class="blue">Otras formas de contacto</h2>
+        <div class="transparencia-otra">
+          <img src="images/transparencia-correo.svg" alt="Correo electrónico">
+          Enviando un correo a <a href="mailto:transparencia@fanosa.com">transparencia@fanosa.com</a>
+        </div>
+        <div class="transparencia-otra">
+          <img src="images/transparencia-buzon.svg" alt="Buzón">
+          En el buzón que está ubicado en cada planta</b>
+        </div>
+        <div class="transparencia-otra">
+          <img src="images/transparencia-telefono.svg" alt="Teléfono">
+          Llamando sin costo al
+          teléfono <a href="tel:8000004444">800 000 4444</a></b>
+        </div>
+
+      </div>
+    </div>
+
+    <footer w3-include-html="footer.html"></footer>
+
+    <script>
+      includeHTML();
+    </script>
+  </body>
+</html>

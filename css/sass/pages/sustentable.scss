@@ -1,0 +1,102 @@
+.sustentable-01 {
+  .wrapper-half,
+  .wrapper-half-small {
+    position: relative;
+  }
+
+  .wrapper-half {
+    z-index: 2;
+  }
+
+  .wrapper-half-small {
+    z-index: 1;
+
+    @include breakpoint(desktop) {
+      width: 24%;
+      min-width: unset;
+      margin-right: 100px;
+    }
+  }
+
+  .img-footer {
+    font-size: $txt-s;
+    text-align: center;
+    margin: 10px 0 20px;
+
+    @include breakpoint(desktop) {
+      text-align: left;
+    }
+  }
+}
+
+.sustentable-01-img01,
+.sustentable-01-img02 {
+  margin: 0 auto;
+  display: block;
+  max-width: 450px;
+  border-radius: $br;
+  box-shadow: $img-shadow;
+  background: $color-text;
+  width: calc(100% - 40px);
+
+  @include breakpoint(desktop) {
+    height: 320px;
+  }
+}
+
+.sustentable-01-img01 {
+  @include breakpoint(desktop) {
+    width: 600px;
+    min-width: 600px;
+    margin-left: -10px;
+  }
+}
+
+.sustentable-01-img02 {
+  @include breakpoint(desktop) {
+    width: 440px;
+    margin-left: -140px;
+  }
+}
+
+.sustentable-02 {
+  padding: 30px 0;
+
+  h1,
+  h2,
+  h4,
+  p {
+    width: 100%;
+    text-align: center;
+  }
+
+  .wrapper {
+    align-items: flex-start;
+    justify-content: space-evenly;
+  }
+
+  p {
+    margin: 0 0 30px;
+  }
+}
+
+.sustentable-02-col {
+  width: 175px;
+  color: $color-bg;
+  margin-top: 70px;
+  border-radius: $br;
+  margin-bottom: 20px;
+  padding: 10px 20px 0;
+  box-shadow: $img-shadow;
+  background: $color-second;
+
+  h4 {
+    text-transform: uppercase;
+  }
+
+  img {
+    width: 120px;
+    display: block;
+    margin: -75px auto 20px;
+  }
+}

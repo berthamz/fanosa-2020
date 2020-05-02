@@ -1,0 +1,73 @@
+.home-01 {
+  z-index: 2;
+  position: relative;
+  justify-content: center;
+
+  img {
+    width: 100%;
+    max-height: 450px;
+    margin-top: -20px;
+    object-fit: contain;
+    margin-bottom: -80px;
+
+    @include breakpoint(desktop) {
+      margin-bottom: 0;
+      margin-top: -80px;
+    }
+  }
+}
+
+.home-02 {
+  background: linear-gradient($color-bg 30%, $color-body 30%);
+
+  @include breakpoint(desktop) {
+    background: linear-gradient($color-bg 50%, $color-body 50%);
+  }
+
+  .home-02-img {
+    z-index: 1;
+    margin: 0 auto;
+    position: relative;
+
+    @include breakpoint(desktop) {
+      height: 390px;
+      order: 1;
+    }
+  }
+
+  img {
+    width: 100%;
+    height: 320px;
+    display: block;
+    max-width: 450px;
+    border-radius: $br;
+    box-shadow: $img-shadow;
+    background: $color-text;
+
+    @include breakpoint(desktop) {
+      top: 30px;
+      right: -80px;
+      position: relative;
+      object-fit: cover;
+    }
+  }
+
+  .home-02-txt {
+    padding: 40px;
+    color: $color-bg;
+    max-width: 520px;
+    margin: 20px auto;
+    border-radius: 20px;
+    background: $color-main;
+    min-width: calc(100% - 80px);
+
+    @include breakpoint(desktop) {
+      order: 2;
+      margin: 0;
+      width: 39%;
+      height: 240px;
+      min-width: auto;
+      padding: 40px 40px 40px 100px;
+    }
+  }
+}

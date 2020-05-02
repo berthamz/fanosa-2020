@@ -1,0 +1,33 @@
+.transparencia-otras {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  h2 {
+    width: 100%;
+    margin-top: 30px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+}
+
+.transparencia-otra {
+  width: 180px;
+  text-align: center;
+  margin: 10px 0 40px;
+
+  img {
+    width: 90px;
+    display: block;
+    margin: 0 auto 20px;
+  }
+
+  a {
+    font-weight: 600;
+    color: $color-text;
+
+    &:hover {
+      color: $color-second;
+    }
+  }
+}

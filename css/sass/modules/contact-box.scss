@@ -1,0 +1,53 @@
+.contact-box {
+  z-index: 1;
+  position: relative;
+  padding: 50px 0 20px;
+  background: $color-body;
+
+  &.no-padding {
+    @include breakpoint(desktop) {
+      padding-top: 0;
+    }
+  }
+}
+
+.contact-form-module-box {
+  padding: 40px;
+  margin: 0 auto;
+  max-width: 280px;
+  text-align: center;
+  border-radius: 20px;
+  background: $color-bg;
+  width: calc(90% - 80px);
+}
+
+.contact-module-input {
+  padding: 5px;
+  display: block;
+  margin: 10px auto;
+  border-radius: 15px;
+  background: $color-bg;
+  width: calc(100% - 12px);
+  border: 1px solid $color-text;
+  font: 400 $txt-r $font-body;
+  line-height: $txt-r;
+}
+
+.contact-module-privacidad {
+  display: block;
+  color: #87898e;
+  font-size: $txt-s;
+  margin: 30px auto;
+
+  a {
+    color: #87898e;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.contact-module-send {
+  margin: 20px auto 0;
+}

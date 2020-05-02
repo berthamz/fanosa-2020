@@ -1,4 +1,29 @@
+body {
+  margin: 0;
+  padding-top: 50px;
+  color: $color-text;
+  background: $color-bg;
+  font: 400 $txt-r $font-body;
+
+  @include breakpoint(desktop) {
+    padding-top: 95px;
+  }
+}
+
+h1 {
+  hyphens: auto;
+  margin: 0 0 20px;
+  text-transform: uppercase;
+  font: 800 $txt-xl $font-title;
+}
+
+h2 {
+  margin: 0 0 20px;
+  font: 800 $txt-l $font-title;
+}
+
 h4 {
+  font-size: $txt-m;
   margin: 0 0 10px;
 }
 
@@ -12,10 +37,52 @@ a {
   }
 }
 
+b,
+strong {
+  font-weight: 600;
+}
+
+img {
+  object-fit: contain;
+}
+
 .orange {
   color: $color-second;
 }
 
 .blue {
   color: $color-main;
+}
+
+.grey-bg {
+  background-color: $color-body;
+}
+
+.btn-orange {
+  border: 0;
+  width: 100px;
+  padding: 10px;
+  margin: 20px 0;
+  display: block;
+  color: $color-bg;
+  text-align: center;
+  border-radius: 20px;
+  transition: $transition;
+  background: $color-second;
+  font: 600 calc(#{$txt-r} - 1px) $font-body;
+
+  &:hover {
+    color: $color-bg;
+    background: darken($color-second, 10%);
+  }
+}
+
+.btn-grey {
+  @extend .btn-orange;
+  background: $color-text;
+
+  &:hover {
+    color: $color-bg;
+    background: darken($color-text, 10%);
+  }
 }

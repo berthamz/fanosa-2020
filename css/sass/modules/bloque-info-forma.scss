@@ -1,0 +1,89 @@
+.bloque-info-forma {
+  z-index: 1;
+  width: 100%;
+  padding: 20px;
+  color: $color-bg;
+  position: relative;
+  border-radius: 20px;
+  margin: -30px 0 20px;
+  background: $color-main;
+
+  @include breakpoint(desktop) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -50px;
+    padding: 50px 30px 20px;
+    justify-content: space-around;
+  }
+
+  .bloque-half {
+    margin: 20px 0;
+    @include breakpoint(desktop) {
+      margin: 0;
+      width: 45%;
+    }
+  }
+}
+
+.info-forma {
+  text-align: center;
+
+  @include breakpoint(desktop) {
+    text-align: left;
+  }
+
+  .info-forma-text {
+    outline: none;
+    display: block;
+    font-size: 14px;
+    color: $color-bg;
+    padding: 3px 5px;
+    max-width: 500px;
+    border-radius: 10px;
+    margin: 0 auto 15px;
+    background: $color-main;
+    font-family: $font-body;
+    width: calc(100% - 10px);
+    border: 1px solid $color-bg;
+
+    &::placeholder {
+      color: $color-body;
+    }
+
+    &.forma-interes {
+      width: 100%;
+    }
+  }
+
+  .checkbox-privacidad {
+    font-size: $txt-s;
+
+    @include breakpoint(desktop) {
+      line-height: 30px;
+      display: inline-block;
+    }
+
+    a {
+      color: $color-bg;
+      text-decoration: underline;
+
+      &:hover {
+        color: $color-second;
+      }
+    }
+  }
+
+  .btn-orange {
+    margin: 20px auto;
+
+    @include breakpoint(desktop) {
+      margin: 0;
+      float: right;
+      margin-bottom: 20px;
+    }
+  }
+
+  input#file-upload-button {
+    background: $color-second;
+  }
+}

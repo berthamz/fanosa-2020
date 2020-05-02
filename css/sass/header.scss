@@ -3,15 +3,12 @@ header {
   z-index: 9;
   width: 100%;
   position: fixed;
-
-  @include breakpoint(desktop) {
-    position: relative;
-  }
 }
 
 .header {
   height: 50px;
   background: $color-bg;
+  transition: $transition;
 
   @include breakpoint(desktop) {
     height: 65px;
@@ -20,6 +17,7 @@ header {
 
   .wrapper {
     display: flex;
+    max-width: 1020px;
     flex-wrap: nowrap;
     align-items: center;
     justify-content: space-between;
@@ -81,6 +79,13 @@ header {
       }
     }
   }
+
+  &.sticky {
+    @include breakpoint(desktop) {
+      height: 50px;
+      padding-top: 0;
+    }
+  }
 }
 
 .header-logo {
@@ -89,14 +94,40 @@ header {
   max-width: 50%;
   margin-left: 10px;
   margin-right: auto;
+  align-self: center;
 
   @include breakpoint(desktop) {
     width: 225px;
     height: 55px;
+    align-self: flex-start;
+    transition: $transition;
   }
 
   a {
     display: block;
+  }
+
+  .sticky & {
+    @include breakpoint(desktop) {
+      height: 40px;
+    }
+  }
+
+  img {
+    @include breakpoint(desktop) {
+      width: 260px;
+      height: 55px;
+      margin-top: 0;
+      transition: $transition;
+    }
+
+    .sticky & {
+      @include breakpoint(desktop) {
+        width: 180px;
+        height: 40px;
+        margin-top: 5px;
+      }
+    }
   }
 }
 
@@ -112,13 +143,16 @@ header {
 
 // FANOSA PHONE
 .fanosa-phone {
+  opacity: 1;
   display: none;
   padding: 0 20px;
   font-size: 15px;
   font-weight: 700;
   line-height: 20px;
+  overflow: hidden;
 
   @include breakpoint(desktop) {
+    height: 22px;
     display: block;
   }
 
@@ -131,14 +165,32 @@ header {
     background: url("../images/phone-icon.svg") no-repeat center;
     background-size: contain;
   }
+
+  .sticky & {
+    @include breakpoint(desktop) {
+      opacity: 0;
+      height: 0;
+    }
+  }
 }
 
 // SEARCH
 .header-search {
+  opacity: 1;
   display: none;
+  transition: $transition;
 
   @include breakpoint(desktop) {
+    height: 22px;
+    overflow: hidden;
     display: inline-flex;
+  }
+
+  .sticky & {
+    @include breakpoint(desktop) {
+      opacity: 0;
+      height: 0;
+    }
   }
 }
 
@@ -146,10 +198,14 @@ header {
   border: 0;
   margin: 0;
   width: 120px;
-  padding: 3px;
+  padding: 3px 5px;
   line-height: 16px;
   background: $color-body;
   border-radius: 10px 0 0 10px;
+
+  &:focus {
+    outline: none;
+  }
 }
 
 .search-btn {
@@ -166,11 +222,13 @@ header {
 
 // LANGUAGE
 .header-lang {
+  opacity: 1;
   height: 22px;
   color: #87898e;
   font-size: $txt-s;
   margin-left: 10px;
   line-height: 20px;
+  transition: $transition;
 
   span {
     margin: 0 10px;
@@ -189,6 +247,13 @@ header {
       color: $color-text;
     }
   }
+
+  .sticky & {
+    @include breakpoint(desktop) {
+      height: 0;
+      opacity: 0;
+    }
+  }
 }
 
 // MENU DESKTOP
@@ -201,6 +266,7 @@ header {
   font-weight: 700;
   flex-wrap: nowrap;
   justify-content: space-between;
+  transition: $transition;
 
   @include breakpoint(desktop) {
     display: flex;
@@ -222,15 +288,33 @@ header {
   a {
     display: block;
   }
+
+  .sticky & {
+    @include breakpoint(desktop) {
+      margin-top: 16px;
+    }
+  }
 }
 
 .menu-productos {
-  width: 110px;
+  width: 150px;
+  margin: 0 -20px;
+  overflow: hidden;
   text-align: center;
 
-  &.active > a {
-    color: $color-second;
-    border-bottom: 2px solid $color-second;
+  > a {
+    width: 70px;
+    margin: 0 auto;
+    cursor: pointer;
+  }
+
+  &.active {
+    overflow: visible;
+
+    > a {
+      color: $color-second;
+      border-bottom: 2px solid $color-second;
+    }
   }
 }
 
@@ -241,13 +325,12 @@ header {
     height: 0;
     opacity: 0;
     padding: 0;
+    width: 100%;
     display: block;
     font-size: 14px;
-    overflow: hidden;
     list-style: none;
     font-weight: 400;
-    margin-left: -20px;
-    width: calc(100% + 40px);
+    overflow: hidden;
     border-radius: 0 0 15px 15px;
     background-color: rgba($color-bg, 0.7);
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
@@ -257,7 +340,6 @@ header {
   .active & {
     opacity: 1;
     height: 110px;
-    overflow: auto;
     padding: 10px 0;
   }
 

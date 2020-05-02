@@ -1,0 +1,40 @@
+.privacidad-left {
+  width: 100%;
+  padding-bottom: 40px;
+
+  @include breakpoint(desktop) {
+    order: 1;
+    width: calc(100% - 180px);
+  }
+}
+
+.privacidad-right {
+  width: 100%;
+  text-align: center;
+  padding: 0 20px;
+
+  @include breakpoint(desktop) {
+    order: 2;
+    width: 140px;
+    position: relative;
+  }
+
+  img {
+    width: 100px;
+    margin: 0 -20px 20px 0;
+  }
+
+  a {
+    margin: 0 auto;
+  }
+}
+
+.privacidad-pdf {
+  &.stick {
+    @include breakpoint(desktop) {
+      top: 60px;
+      position: fixed;
+      margin-left: 10px;
+    }
+  }
+}

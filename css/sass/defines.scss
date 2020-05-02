@@ -6,7 +6,7 @@ $txt-s: 12px;
 $txt-r: 16px;
 $txt-m: 20px;
 $txt-l: 28px;
-$txt-xl: 36px;
+$txt-xl: 40px;
 
 $color-bg: #ffffff;
 $color-body: #f1f1f1;
@@ -14,7 +14,11 @@ $color-text: #4b4f53;
 $color-main: #2a66b1;
 $color-second: #ed7f22;
 
+// Design
+
+$br: 20px;
 $transition: all ease 0.25s;
+$img-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
 
 // MIXINS //
 
