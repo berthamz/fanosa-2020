@@ -1,5 +1,6 @@
 .home-01 {
   z-index: 2;
+  padding: 0;
   position: relative;
   justify-content: center;
 
@@ -22,6 +23,10 @@
 
   @include breakpoint(desktop) {
     background: linear-gradient($color-bg 50%, $color-body 50%);
+  }
+
+  .wrapper {
+    padding: 0;
   }
 
   .home-02-img {

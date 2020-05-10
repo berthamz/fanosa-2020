@@ -1,0 +1,41 @@
+.descargas-block {
+  width: 100%;
+  padding: 20px 0;
+
+  &.grey-bg-up {
+    background: linear-gradient($color-body 50%, $color-bg 50%);
+  }
+  &.grey-bg-down {
+    background: linear-gradient($color-bg 50%, $color-body 50%);
+  }
+}
+.descargas-cta {
+  display: flex;
+  padding: 20px;
+  flex-wrap: wrap;
+  max-width: 740px;
+  color: $color-bg;
+  border-radius: $br;
+  margin: 0 auto 20px;
+  align-items: flex-end;
+  background: $color-main;
+  justify-content: center;
+  width: calc(100% - 50px);
+
+  @include breakpoint(desktop) {
+    padding: 30px;
+    flex-wrap: nowrap;
+    align-items: flex-end;
+    width: calc(100% - 60px);
+    justify-content: space-between;
+  }
+
+  .descarga-cta-txt {
+    max-width: 500px;
+  }
+
+  .btn-orange {
+    height: 20px;
+    margin-bottom: 0;
+  }
+}

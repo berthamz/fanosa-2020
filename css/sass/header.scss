@@ -16,6 +16,7 @@ header {
   }
 
   .wrapper {
+    padding: 0;
     display: flex;
     max-width: 1020px;
     flex-wrap: nowrap;
@@ -84,6 +85,7 @@ header {
     @include breakpoint(desktop) {
       height: 50px;
       padding-top: 0;
+      background: rgba(255, 255, 255, 0.9);
     }
   }
 }
@@ -277,7 +279,7 @@ header {
     padding: 0 20px;
     line-height: 24px;
     padding-bottom: 7px;
-    border-bottom: 2px solid $color-bg;
+    border-bottom: 2px solid transparent;
     transition: $transition;
 
     &:hover {
@@ -291,7 +293,7 @@ header {
 
   .sticky & {
     @include breakpoint(desktop) {
-      margin-top: 16px;
+      margin-top: 17px;
     }
   }
 }
