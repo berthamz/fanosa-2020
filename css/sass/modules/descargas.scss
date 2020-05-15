@@ -13,6 +13,7 @@
   display: flex;
   padding: 20px;
   flex-wrap: wrap;
+  min-width: 270px;
   max-width: 740px;
   color: $color-bg;
   border-radius: $br;
@@ -20,7 +21,7 @@
   align-items: flex-end;
   background: $color-main;
   justify-content: center;
-  width: calc(100% - 50px);
+  width: calc(100% - 100px);
 
   @include breakpoint(desktop) {
     padding: 30px;
@@ -35,7 +36,156 @@
   }
 
   .btn-orange {
+    margin: 0;
     height: 20px;
-    margin-bottom: 0;
+    cursor: pointer;
+  }
+}
+
+// Estilos del overlay de Descargas
+
+.overlay-descargas {
+  p {
+    max-width: 500px;
+    text-align: center;
+    margin: 0 auto 30px;
+  }
+}
+
+.wrapper-descargas-overlay {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: stretch;
+  justify-content: space-between;
+
+  .descargas-single {
+    width: 100%;
+    max-width: 300px;
+    padding: 20px 10px;
+
+    @include breakpoint(desktop) {
+      width: 47%;
+      padding: 20px;
+    }
+  }
+
+  .descargas-single-icon {
+    width: 85px;
+    height: auto;
+    float: left;
+    margin-right: 10px;
+
+    @include breakpoint(desktop) {
+      width: 95px;
+    }
+  }
+
+  h5 {
+    color: $color-main;
+    margin: 10px 0 5px;
+    font-size: $txt-r;
+
+    @include breakpoint(desktop) {
+      margin-top: 20px;
+    }
+  }
+
+  .descargas-btn {
+    padding: 0 10px;
+    line-height: 20px;
+    color: $color-text;
+    border-radius: $br;
+    margin: 0 5px 5px 0;
+    display: inline-block;
+    border: 1px solid $color-text;
+    transition: $transition;
+
+    &:hover {
+      color: $color-second;
+      border-color: $color-second;
+    }
+  }
+}
+
+.descargas-suscribete {
+  display: flex;
+  flex-wrap: wrap;
+  color: $color-bg;
+  margin-top: 20px;
+  padding: 20px 15px;
+  border-radius: $br;
+  background: $color-main;
+  justify-content: space-around;
+
+  @include breakpoint(desktop) {
+    padding: 30px;
+  }
+
+  .overlay-form-text {
+    width: 100%;
+    display: block;
+    max-width: 300px;
+    text-align: left;
+  }
+
+  h2 {
+    margin-bottom: 10px;
+  }
+
+  p {
+    text-align: left;
+    margin-bottom: 20px;
+    font-size: $txt-r + 2px;
+
+    @include breakpoint(desktop) {
+      margin: 0;
+    }
+  }
+
+  form {
+    width: 100%;
+    max-width: 270px;
+  }
+  .descargas-module-input {
+    display: block;
+    color: $color-bg;
+    padding: 3px 5px;
+    font-size: $txt-r;
+    border-radius: $br;
+    margin-bottom: 10px;
+    background: $color-main;
+    font-family: $font-body;
+    width: calc(100% - 12px);
+    border: 1px solid $color-bg;
+
+    &::placeholder {
+      color: rgba($color-bg, 0.7);
+    }
+  }
+
+  .descargas-module-privacidad {
+    font-size: $txt-s;
+    margin-right: 25px;
+    display: inline-block;
+    vertical-align: middle;
+    width: calc(100% - 130px);
+
+    input {
+      float: left;
+      margin-bottom: 15px;
+    }
+
+    a {
+      color: $color-bg;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .descargas-module-send {
+    margin: 0;
+    display: inline-block;
   }
 }

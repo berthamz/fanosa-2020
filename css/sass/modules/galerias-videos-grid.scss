@@ -1,0 +1,120 @@
+.grid-base-wrapper {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: stretch;
+  justify-content: space-evenly;
+
+  @include breakpoint(desktop) {
+    justify-content: space-between;
+  }
+
+  .base-grid {
+    flex-grow: 1;
+    height: 240px;
+    cursor: pointer;
+    min-width: 290px;
+    max-width: 470px;
+    overflow: hidden;
+    position: relative;
+    border-radius: $br;
+    margin: 0 20px 30px;
+    background: $color-bg;
+
+    .galeria-base-img {
+      top: 0;
+      left: 0;
+      opacity: 1;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      transition: $transition;
+    }
+
+    .galeria-base-title {
+      bottom: 0;
+      height: auto;
+      padding: 8px;
+      color: $color-bg;
+      position: absolute;
+      text-align: center;
+      background: $color-main;
+      width: calc(100% - 16px);
+      transition: $transition;
+    }
+
+    &:hover {
+      .galeria-base-img {
+        opacity: 0.7;
+      }
+
+      .galeria-base-title {
+        background: $color-second;
+      }
+    }
+  }
+
+  &.videos {
+    flex-wrap: wrap-reverse;
+
+    .base-grid {
+      height: auto;
+      flex: 3 1 29%;
+      cursor: pointer;
+      overflow: hidden;
+      min-width: 290px;
+      margin-bottom: 30px;
+      margin: 0 20px 30px;
+    }
+  }
+
+  .overlay-wrapper & {
+    .base-grid {
+      height: 210px;
+      min-width: 210px;
+      max-width: 340px;
+    }
+  }
+}
+
+/* Estilos para grid de videos */
+
+.video-wrapper {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  position: relative;
+  border-radius: $br;
+  background: $color-text;
+
+  .video-thumb {
+    width: 100%;
+    height: 100%;
+    opacity: 0.7;
+    object-fit: cover;
+    transition: $transition;
+  }
+
+  .video-play-icon {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: calc(50% - 50px);
+    left: calc(50% - 50px);
+  }
+
+  &:hover {
+    .video-thumb {
+      opacity: 1;
+    }
+  }
+}
+
+.video-base-title {
+  margin: 10px 0 5px;
+}
+
+.video-base-description {
+  margin: 5px 0;
+}
