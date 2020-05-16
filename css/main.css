@@ -1,6 +1,6 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Source+Sans+Pro:ital,wght@0,400;0,600;0,900;1,400;1,600;1,700&display=swap");
-h1 {
+h1, .contacto-phone-large {
   hyphens: auto;
   margin: 0 0 20px;
   text-transform: uppercase;
@@ -106,7 +106,7 @@ div.no-padding-bottom {
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3); }
     @media (min-width: 1024px) {
       .overlay-base .overlay-wrapper {
-        width: 760px;
+        width: 980px;
         padding: 20px;
         margin: 80px auto 10px; } }
   .overlay-base .close-btn {
@@ -120,11 +120,12 @@ div.no-padding-bottom {
     @media (min-width: 1024px) {
       .overlay-base .close-btn {
         top: 65px;
-        right: calc(50% - 415px); } }
-  .overlay-base h1 {
+        right: calc(50% - 525px); } }
+  .overlay-base h1, .overlay-base .contacto-phone-large {
     width: 100%;
+    color: #2a66b1;
     text-align: center;
-    margin: 20px 0 10px; }
+    margin: 20px 0 30px; }
 
 body {
   margin: 0;
@@ -193,11 +194,11 @@ body {
     display: flex;
     position: absolute;
     align-items: center; }
-  .page-top h1 {
+  .page-top h1, .page-top .contacto-phone-large {
     margin: 0;
     font-size: 32px; }
     @media (min-width: 1024px) {
-      .page-top h1 {
+      .page-top h1, .page-top .contacto-phone-large {
         font-size: 44px;
         max-width: 600px; } }
   .page-top.no-margin {
@@ -524,7 +525,8 @@ header {
     display: block;
     padding: 0 10px;
     color: #ffffff;
-    line-height: 30px;
+    line-height: 34px;
+    font-size: 18px;
     background-color: transparent;
     transition: all ease 0.25s; }
     .overlay-menu a:hover {
@@ -752,14 +754,14 @@ footer {
   width: 100%;
   height: 100%;
   position: absolute; }
-  .carousel-home .carousel-slide h1,
+  .carousel-home .carousel-slide h1, .carousel-home .carousel-slide .contacto-phone-large,
   .carousel-home .carousel-slide p {
     margin: 10px 0;
     display: block;
     max-width: 100%;
     color: #ffffff;
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.5); }
-  .carousel-home .carousel-slide h1 {
+  .carousel-home .carousel-slide h1, .carousel-home .carousel-slide .contacto-phone-large {
     width: 550px;
     font-size: calc(40px + 3px); }
   .carousel-home .carousel-slide p {
@@ -885,7 +887,7 @@ footer {
 
 .ventajas {
   text-align: center; }
-  .ventajas h1 {
+  .ventajas h1, .ventajas .contacto-phone-large {
     width: 100%; }
   .ventajas p {
     max-width: 600px;
@@ -1147,6 +1149,14 @@ footer {
 .video-base-description {
   margin: 5px 0; }
 
+/* Estilos para Overlay de Videos */
+.overlay-wrapper iframe {
+  width: 100%;
+  height: 350px; }
+  @media (min-width: 1024px) {
+    .overlay-wrapper iframe {
+      height: 550px; } }
+
 /* Estilos para Overlay Galerías */
 .overlay-categorias-btns {
   display: flex;
@@ -1154,22 +1164,73 @@ footer {
   margin-bottom: 10px; }
   .overlay-categorias-btns div {
     cursor: pointer;
-    font-weight: 700;
+    font-weight: 600;
     color: #2a66b1;
     margin: 0 15px 5px 0; }
     .overlay-categorias-btns div:hover {
       color: #ed7f22; }
 
+.overlay-slideshow {
+  width: 100%;
+  height: 550px;
+  position: relative;
+  margin-bottom: 30px; }
+  @media (min-width: 1024px) {
+    .overlay-slideshow {
+      height: 700px; } }
+  .overlay-slideshow .js-carousel-viewer {
+    width: 100% !important; }
+  .overlay-slideshow .js-button-layer {
+    top: 175px;
+    width: 100%;
+    height: 65px; }
+    @media (min-width: 1024px) {
+      .overlay-slideshow .js-button-layer {
+        top: 250px; } }
+    .overlay-slideshow .js-button-layer .js-carousel-btns {
+      display: none; }
+    .overlay-slideshow .js-button-layer .btn {
+      width: 45px;
+      height: 65px;
+      overflow: hidden;
+      position: absolute;
+      text-indent: -999px;
+      background-size: contain;
+      background-repeat: no-repeat; }
+      .overlay-slideshow .js-button-layer .btn.prev {
+        background-image: url("../images/slide-icon-back.svg"); }
+      .overlay-slideshow .js-button-layer .btn.next {
+        right: 0;
+        background-image: url("../images/slide-icon-next.svg"); }
+  .overlay-slideshow .overlay-slideshow-slide {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    width: 100% !important;
+    background: #f1f1f1; }
+  .overlay-slideshow img {
+    height: 450px;
+    object-fit: cover; }
+    @media (min-width: 1024px) {
+      .overlay-slideshow img {
+        height: 600px; } }
+  .overlay-slideshow .carousel-slide {
+    height: 100px;
+    overflow: auto; }
+  .overlay-slideshow h4,
+  .overlay-slideshow p {
+    margin: 10px 0; }
+
 .productos-galerias {
   text-align: center; }
-  .productos-galerias h1 {
+  .productos-galerias h1, .productos-galerias .contacto-phone-large {
     width: 100%; }
   .productos-galerias p {
     display: block;
     max-width: 700px;
     margin: 20px auto; }
 
-.productos-videos h1 {
+.productos-videos h1, .productos-videos .contacto-phone-large {
   width: 100%; }
 
 .home-01 {
@@ -1657,7 +1718,7 @@ footer {
 
 .sustentable-02 {
   padding: 30px 0; }
-  .sustentable-02 h1,
+  .sustentable-02 h1, .sustentable-02 .contacto-phone-large,
   .sustentable-02 h2,
   .sustentable-02 h4,
   .sustentable-02 p {
@@ -1729,7 +1790,7 @@ footer {
         width: 800px;
         max-width: none;
         padding: 30px 50px 20px; } }
-    .experiencia-02 .wrapper h1 {
+    .experiencia-02 .wrapper h1, .experiencia-02 .wrapper .contacto-phone-large {
       width: 100%;
       margin-bottom: 0; }
   .experiencia-02 p {
@@ -1943,5 +2004,19 @@ footer {
     background-color: #ed7f22; }
   .listado-caract .ahorra {
     background: #87898e; }
+
+.contact-form-page .contact-module-privacidad {
+  display: inline-block;
+  margin-top: 20px; }
+.contact-form-page .btn-orange, .contact-form-page .btn-grey {
+  float: right;
+  margin-top: 10px; }
+
+.contacto-phone-large {
+  display: block;
+  margin-bottom: 30px; }
+  @media (min-width: 1024px) {
+    .contacto-phone-large {
+      font-size: 50px; } }
 
 /*# sourceMappingURL=main.css.map */

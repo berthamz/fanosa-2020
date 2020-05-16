@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fanosa</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="stylesheet" href="css/main.css" />
+    <script type="text/javascript" src="js/jquery-3.5.0.min.js"></script>
+    <script type="text/javascript" src="js/include.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+  </head>
+
+  <body>
+    <header w3-include-html="header.html"></header>
+
+    <div class="page-top no-margin">
+      <img src="images/top-contacto.jpg" alt="Contáctanos" />
+      <div class="page-top-text">
+        <div class="wrapper">
+          <h1>Contáctanos</h1>
+        </div>
+      </div>
+    </div>
+
+    <div class="grey-bg">
+      <div class="wrapper">
+        <div class="wrapper-half-small">
+          <h1 class="blue">
+            JUNTOS EN <br />
+            TU PROYECTO
+          </h1>
+          <p>
+            Llámanos o déjanos tus datos y un asesor se comunicará contigo para
+            entender tu proyecto y asesorarte con la solución más adecuada a tu
+            proyecto con los productos Fanosa®.
+          </p>
+          <a href="tel:8002326672" class="contacto-phone-large">800 232 6672</a>
+        </div>
+        <div class="wrapper-half-small">
+          <form action="#" class="contact-form-page">
+            <input
+              type="text"
+              class="contact-module-input"
+              placeholder="Nombre*"
+            />
+            <input
+              type="text"
+              class="contact-module-input"
+              placeholder="Apellido*"
+            />
+            <input
+              type="tel"
+              name="phone"
+              id="contact-module-phone"
+              class="contact-module-input"
+              placeholder="Teléfono*"
+            />
+            <input
+              type="email"
+              name="email"
+              id="contact-module-email"
+              class="contact-module-input"
+              placeholder="Correo*"
+            />
+            <textarea
+              name="comentarios"
+              id="contact-form-comments"
+              cols="30"
+              rows="10"
+              class="contact-module-input"
+              placeholder="Comentario"
+            ></textarea>
+            <span class="contact-module-privacidad">
+              <input type="checkbox" name="privacidad" id="privacidad" />
+              Acepto <a href="#">política de privacidad</a>.
+            </span>
+            <input
+              type="submit"
+              value="Enviar"
+              class="btn-orange contact-module-send"
+            />
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrapper cobertura">
+      <h1 class="blue">Cobertura</h1>
+      <p>
+        Encuentra nuestros productos en todo México, el sur de Estados Unidos,
+        Guatemala y Belice.
+      </p>
+      <div class="mapa-cobertura">
+        MAPA
+      </div>
+      <div class="cobertura-box">
+        <div class="cobertura-left">
+          <h1>Directorio</h1>
+          <p>
+            Encuentra a tu distribuidor más cercano, o si prefieres llámanos y
+            un asesor se comunicará contigo.
+          </p>
+          <select name="cobertura-menu" id="cobertura-menu">
+            <option value="mexicali">Mexicali</option>
+            <option value="hermosillo">Hermosillo</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <footer w3-include-html="footer.html"></footer>
+
+    <script>
+      includeHTML();
+    </script>
+  </body>
+</html>

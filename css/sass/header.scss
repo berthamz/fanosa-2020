@@ -436,7 +436,8 @@ header {
     display: block;
     padding: 0 10px;
     color: $color-bg;
-    line-height: 30px;
+    line-height: 34px;
+    font-size: $txt-m - 2px;
     background-color: transparent;
     transition: $transition;
 

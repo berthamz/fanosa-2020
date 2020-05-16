@@ -1,0 +1,20 @@
+.contact-form-page {
+  .contact-module-privacidad {
+    display: inline-block;
+    margin-top: 20px;
+  }
+
+  .btn-orange {
+    float: right;
+    margin-top: 10px;
+  }
+}
+.contacto-phone-large {
+  @extend h1;
+  display: block;
+  margin-bottom: 30px;
+
+  @include breakpoint(desktop) {
+    font-size: $txt-xl + 10px;
+  }
+}

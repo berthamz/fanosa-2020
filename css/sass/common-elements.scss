@@ -132,7 +132,7 @@ div.no-padding-bottom {
     box-shadow: $img-shadow;
 
     @include breakpoint(desktop) {
-      width: 760px;
+      width: 980px;
       padding: 20px;
       margin: 80px auto 10px;
     }
@@ -149,13 +149,14 @@ div.no-padding-bottom {
 
     @include breakpoint(desktop) {
       top: 65px;
-      right: calc(50% - 415px);
+      right: calc(50% - 525px);
     }
   }
 
   h1 {
     width: 100%;
+    color: $color-main;
     text-align: center;
-    margin: 20px 0 10px;
+    margin: 20px 0 30px;
   }
 }
