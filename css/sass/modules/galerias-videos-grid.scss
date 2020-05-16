@@ -118,3 +118,22 @@
 .video-base-description {
   margin: 5px 0;
 }
+
+/* Estilos para Overlay Galerías */
+
+.overlay-categorias-btns {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+
+  div {
+    cursor: pointer;
+    font-weight: 700;
+    color: $color-main;
+    margin: 0 15px 5px 0;
+
+    &:hover {
+      color: $color-second;
+    }
+  }
+}
