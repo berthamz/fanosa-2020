@@ -42,14 +42,13 @@ $(document).ready(function () {
 
   $(".base-grid > div, .overlay-categorias-btns > div").click(function () {
     var overlayName = this.className;
-    $("body").addClass("noscroll");
 
     if ($(this).parents(".overlay-wrapper").length) {
       $(".overlay-base").fadeOut(200);
-      $(".overlay-" + overlayName).fadeIn(200);
-    } else {
-      $(".overlay-" + overlayName).fadeIn(200);
     }
+
+    $("body").addClass("noscroll");
+    $(".overlay-" + overlayName).fadeIn(200);
   });
 
   // Botón Close para Descargas, Galerías y Videos
@@ -57,5 +56,13 @@ $(document).ready(function () {
   $(".js-close").click(function () {
     $("body").removeClass("noscroll");
     $(".overlay-base").fadeOut(100);
+  });
+
+  // Select Contacto
+  $("#cobertura-menu").change(function () {
+    var selectedCity = $(this).children("option:selected").val();
+
+    $(".cobertura-ciudad").fadeOut(0);
+    $(".opcion-" + selectedCity).fadeIn(200);
   });
 });

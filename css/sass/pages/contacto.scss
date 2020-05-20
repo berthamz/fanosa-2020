@@ -1,4 +1,7 @@
 .contact-form-page {
+  margin: 0 auto;
+  max-width: 600px;
+
   .contact-module-privacidad {
     display: inline-block;
     margin-top: 20px;
@@ -16,5 +19,152 @@
 
   @include breakpoint(desktop) {
     font-size: $txt-xl + 10px;
+  }
+}
+
+.cobertura {
+  text-align: center;
+
+  h1 {
+    width: 100%;
+  }
+
+  > p {
+    width: 90%;
+    max-width: 700px;
+    margin: 0 auto 20px;
+  }
+}
+
+.mapa-cobertura {
+  z-index: 3;
+  width: 100%;
+  position: relative;
+
+  img {
+    margin: 0 auto;
+    display: block;
+    max-width: 100%;
+  }
+}
+
+.cobertura-box {
+  z-index: 2;
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background: $color-main;
+  color: $color-bg;
+  max-width: 800px;
+  border-radius: $br;
+  margin: -50px auto 20px;
+  padding: 30px 10px 15px;
+
+  @include breakpoint(desktop) {
+    flex-wrap: nowrap;
+    margin-top: -90px;
+    padding: 50px 20px 30px;
+    justify-content: space-between;
+  }
+
+  .cobertura-left,
+  .cobertura-right {
+    width: 45%;
+    min-width: 250px;
+    text-align: left;
+  }
+
+  select {
+    outline: none;
+    display: block;
+    font-size: 14px;
+    color: $color-bg;
+    margin: 0 0 15px;
+    padding: 3px 5px;
+    max-width: 500px;
+    border-radius: 10px;
+    background: $color-main;
+    font-family: $font-body;
+    width: calc(100% - 10px);
+    border: 1px solid $color-bg;
+
+    &::placeholder {
+      color: $color-body;
+    }
+  }
+
+  .cobertura-right {
+    padding: 15px;
+    border-radius: $br;
+    background: $color-bg;
+  }
+
+  .cobertura-ciudad {
+    display: none;
+    color: $color-text;
+
+    .ubicacion {
+      overflow: auto;
+      margin-bottom: 30px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    .location,
+    .phone,
+    .email {
+      margin-bottom: 3px;
+
+      &:before {
+        content: "";
+        width: 17px;
+        height: 20px;
+        margin-right: 5px;
+        display: inline-block;
+        vertical-align: middle;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+    }
+
+    .location {
+      font-size: 18px;
+      font-weight: 700;
+
+      &:before {
+        background-image: url("../images/contact-icon-location.svg");
+      }
+    }
+
+    .phone,
+    .email {
+      display: block;
+      color: $color-text;
+
+      &:hover {
+        color: $color-second;
+      }
+    }
+
+    .phone {
+      &:before {
+        background-image: url("../images/contact-icon-phone.svg");
+      }
+    }
+
+    .email {
+      &:before {
+        background-image: url("../images/contact-icon-email.svg");
+      }
+    }
+
+    .btn-orange {
+      float: right;
+      margin: 0;
+    }
   }
 }

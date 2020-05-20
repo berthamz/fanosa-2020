@@ -10,6 +10,12 @@ h2 {
   font: 800 $txt-l $font-title;
 }
 
+h3 {
+  margin: 0 0 10px;
+  font-size: $txt-m + 4px;
+  font-family: $font-title;
+}
+
 h4 {
   font-size: $txt-m;
   margin: 0 0 10px;

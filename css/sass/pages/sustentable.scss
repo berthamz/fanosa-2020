@@ -34,6 +34,7 @@
   margin: 0 auto;
   display: block;
   max-width: 450px;
+  object-fit: cover;
   border-radius: $br;
   box-shadow: $img-shadow;
   background: $color-text;
@@ -75,8 +76,13 @@
     justify-content: space-evenly;
   }
 
+  h4 {
+    font-size: $txt-m + 4;
+  }
+
   p {
     margin: 0 0 30px;
+    max-width: 700px;
   }
 }
 

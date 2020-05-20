@@ -114,6 +114,7 @@
 
 .calculadora-graficas {
   width: 100%;
+  margin-bottom: 20px;
 
   p {
     font-weight: 600;
@@ -122,6 +123,7 @@
     @include breakpoint(desktop) {
       width: 200px;
       margin-left: 40px;
+      margin-right: 5px;
       text-align: right;
     }
   }
@@ -133,6 +135,12 @@
       display: flex;
       text-align: left;
       align-self: center;
+    }
+
+    &:first-of-type {
+      @include breakpoint(desktop) {
+        align-items: center;
+      }
     }
   }
 
@@ -166,11 +174,11 @@
     }
 
     #pct-ahorro {
-      right: 195px;
+      right: 190px;
     }
 
     #pct-gasto {
-      right: 78px;
+      right: 65px;
     }
   }
 }
@@ -183,11 +191,11 @@
     }
 
     #pct-ahorro {
-      right: 39.5%;
+      right: 38.5%;
     }
 
     #pct-gasto {
-      right: 15.5%;
+      right: 13%;
     }
   }
 }
