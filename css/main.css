@@ -853,9 +853,10 @@ footer {
     .feature-producto-right {
       z-index: 2;
       width: 530px;
+      max-width: none;
       position: relative;
-      margin-left: -105px;
-      margin-bottom: -40px; } }
+      margin-left: -115px;
+      margin-bottom: -70px; } }
 
 .pdto-wrapper-img {
   position: relative; }
@@ -1819,7 +1820,11 @@ footer {
   justify-content: space-evenly; }
   .experiencia-logos img {
     width: 80px;
-    margin: 20px; }
+    height: 80px;
+    margin: 20px 25px; }
+    .experiencia-logos img.wider {
+      width: 140px;
+      max-width: 35%; }
 
 .experiencia-03 {
   padding: 40px 0 30px;
@@ -1829,6 +1834,7 @@ footer {
     height: 250px;
     display: block;
     margin: 20px auto;
+    object-fit: cover;
     border-radius: 20px;
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
     max-width: calc(100% - 20px);
@@ -1899,12 +1905,12 @@ footer {
   @media (min-width: 1024px) {
     .productos-construccion {
       z-index: 2;
-      height: 600px;
+      height: 590px;
       display: block;
       padding-top: 0;
-      margin-bottom: -30px;
-      background-position: 29% bottom;
-      background-size: auto 560px; } }
+      margin-bottom: -50px;
+      background-position: 35% bottom;
+      background-size: auto 545px; } }
   .productos-construccion .construccion-numeros {
     display: block;
     position: absolute;
@@ -1949,7 +1955,7 @@ footer {
       .productos-construccion .productos-list.list-techos h3:before {
         content: "1"; }
     .productos-construccion .productos-list.list-paredes {
-      top: 310px; }
+      top: 305px; }
       .productos-construccion .productos-list.list-paredes h3:before {
         content: "2"; }
     .productos-construccion .productos-list.list-sistemas {
@@ -2020,6 +2026,33 @@ footer {
     background-color: #ed7f22; }
   .listado-caract .ahorra {
     background: #87898e; }
+
+.productos-significado {
+  left: 0;
+  display: flex; }
+  @media (min-width: 1024px) {
+    .productos-significado {
+      bottom: 50px;
+      position: absolute; } }
+  .productos-significado .significado-indiv {
+    font-size: 18px;
+    color: #87898e;
+    font-weight: 600;
+    margin-right: 30px; }
+    .productos-significado .significado-indiv:last-child {
+      margin-right: 0; }
+    .productos-significado .significado-indiv div {
+      width: 15px;
+      height: 15px;
+      margin-right: 5px;
+      border-radius: 3px;
+      display: inline-block; }
+    .productos-significado .significado-indiv .aisla {
+      background-color: #2a66b1; }
+    .productos-significado .significado-indiv .protege {
+      background-color: #ed7f22; }
+    .productos-significado .significado-indiv .ahorra {
+      background: #87898e; }
 
 .contact-form-page {
   margin: 0 auto;

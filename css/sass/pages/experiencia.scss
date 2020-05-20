@@ -60,7 +60,13 @@
 
   img {
     width: 80px;
-    margin: 20px;
+    height: 80px;
+    margin: 20px 25px;
+
+    &.wider {
+      width: 140px;
+      max-width: 35%;
+    }
   }
 }
 
@@ -73,6 +79,7 @@
     height: 250px;
     display: block;
     margin: 20px auto;
+    object-fit: cover;
     border-radius: $br;
     box-shadow: $img-shadow;
     max-width: calc(100% - 20px);

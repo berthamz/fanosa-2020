@@ -7,9 +7,10 @@
   @include breakpoint(desktop) {
     z-index: 2;
     width: 530px;
+    max-width: none;
     position: relative;
-    margin-left: -105px;
-    margin-bottom: -40px;
+    margin-left: -115px;
+    margin-bottom: -70px;
   }
 }
 

@@ -54,12 +54,12 @@
 
   @include breakpoint(desktop) {
     z-index: 2;
-    height: 600px;
+    height: 590px;
     display: block;
     padding-top: 0;
-    margin-bottom: -30px;
-    background-position: 29% bottom;
-    background-size: auto 560px;
+    margin-bottom: -50px;
+    background-position: 35% bottom;
+    background-size: auto 545px;
   }
 
   .construccion-numeros {
@@ -122,7 +122,7 @@
     }
 
     &.list-paredes {
-      top: 310px;
+      top: 305px;
 
       h3:before {
         content: "2";
@@ -224,5 +224,44 @@
   }
   .ahorra {
     background: #87898e;
+  }
+}
+
+.productos-significado {
+  left: 0;
+  display: flex;
+
+  @include breakpoint(desktop) {
+    bottom: 50px;
+    position: absolute;
+  }
+
+  .significado-indiv {
+    font-size: 18px;
+    color: #87898e;
+    font-weight: 600;
+    margin-right: 30px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    div {
+      width: 15px;
+      height: 15px;
+      margin-right: 5px;
+      border-radius: 3px;
+      display: inline-block;
+    }
+
+    .aisla {
+      background-color: $color-main;
+    }
+    .protege {
+      background-color: $color-second;
+    }
+    .ahorra {
+      background: #87898e;
+    }
   }
 }
