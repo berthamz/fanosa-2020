@@ -137,7 +137,7 @@ header {
   display: flex;
 
   @include breakpoint(desktop) {
-    width: 400px;
+    width: 410px;
     flex-wrap: wrap;
     justify-content: flex-end;
   }

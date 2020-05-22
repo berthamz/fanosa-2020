@@ -73,7 +73,7 @@
     .base-grid {
       height: 210px;
       min-width: 210px;
-      max-width: 340px;
+      max-width: 400px;
     }
   }
 }
@@ -139,7 +139,8 @@
   flex-wrap: wrap;
   margin-bottom: 10px;
 
-  div {
+  div,
+  a {
     cursor: pointer;
     font-weight: 600;
     color: $color-main;
@@ -148,6 +149,10 @@
     &:hover {
       color: $color-second;
     }
+  }
+
+  a {
+    color: $color-second;
   }
 }
 
@@ -166,19 +171,39 @@
   }
 
   .js-button-layer {
-    top: 175px;
+    top: 180px;
     width: 100%;
-    height: 65px;
+    height: 115px;
 
     @include breakpoint(desktop) {
-      top: 250px;
+      top: 260px;
+      height: 335px;
     }
 
     .js-carousel-btns {
-      display: none;
+      width: 100%;
+      bottom: 15px;
+      display: flex;
+      justify-content: center;
+      position: absolute !important;
+
+      .btn {
+        width: 20px;
+        height: 5px;
+        margin: 0 3px;
+        border-radius: $br;
+        background: $color-main;
+        box-shadow: 0 0 4px rgba(255, 255, 255, 0.3);
+        transition: $transition;
+
+        &.selected {
+          width: 30px;
+          background-color: $color-second;
+        }
+      }
     }
 
-    .btn {
+    > .btn {
       width: 45px;
       height: 65px;
       overflow: hidden;
@@ -186,6 +211,7 @@
       text-indent: -999px;
       background-size: contain;
       background-repeat: no-repeat;
+      filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.4));
 
       &.prev {
         background-image: url("../images/slide-icon-back.svg");
@@ -207,7 +233,7 @@
 
   img {
     height: 450px;
-    object-fit: cover;
+    object-fit: contain;
 
     @include breakpoint(desktop) {
       height: 600px;

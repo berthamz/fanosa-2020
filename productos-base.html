@@ -7,14 +7,13 @@
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
     <link rel="stylesheet" href="css/main.css" />
     <script type="text/javascript" src="js/jquery-3.5.0.min.js"></script>
-    <script type="text/javascript" src="js/include.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
     <script type="text/javascript" src="js/rellax.js"></script>
     <script type="text/javascript" src="js/carousel.js"></script>
   </head>
 
   <body>
-    <header w3-include-html="header.html"></header>
+    <header></header>
 
     <div class="wrapper no-top">
       <div class="wrapper-half-small">
@@ -318,9 +317,9 @@
       </div>
     </div>
 
-    <div class="contact-box" w3-include-html="contacto-modulo.html"></div>
+    <div class="contact-box"></div>
 
-    <footer w3-include-html="footer.html"></footer>
+    <footer></footer>
 
     <!-- Sección de Descargas -->
     <div class="overlay-base overlay-descargas">
@@ -338,8 +337,8 @@
               class="descargas-single-icon"
             />
             <h5>Ficha Comercial</h5>
-            <a href="#" class="descargas-btn">Online</a>
-            <a href="#" class="descargas-btn">PDF</a>
+            <a href="#" class="descargas-btn" target="_blank">Online</a>
+            <a href="#" class="descargas-btn" download>PDF</a>
           </div>
           <div class="descargas-single">
             <img
@@ -348,8 +347,8 @@
               class="descargas-single-icon"
             />
             <h5>Ficha Técnica</h5>
-            <a href="#" class="descargas-btn">Online</a>
-            <a href="#" class="descargas-btn">PDF</a>
+            <a href="#" class="descargas-btn" target="_blank">Online</a>
+            <a href="#" class="descargas-btn" download>PDF</a>
           </div>
           <div class="descargas-single">
             <img
@@ -358,8 +357,8 @@
               class="descargas-single-icon"
             />
             <h5>Manual de Instalación</h5>
-            <a href="#" class="descargas-btn">Online</a>
-            <a href="#" class="descargas-btn">PDF</a>
+            <a href="#" class="descargas-btn" target="_blank">Online</a>
+            <a href="#" class="descargas-btn" download>PDF</a>
           </div>
           <div class="descargas-single">
             <img
@@ -368,8 +367,8 @@
               class="descargas-single-icon"
             />
             <h5>Pruebas y Certificados</h5>
-            <a href="#" class="descargas-btn">Online</a>
-            <a href="#" class="descargas-btn">PDF</a>
+            <a href="#" class="descargas-btn" target="_blank">Online</a>
+            <a href="#" class="descargas-btn" download>PDF</a>
           </div>
           <div class="descargas-single">
             <img
@@ -378,16 +377,13 @@
               class="descargas-single-icon"
             />
             <h5>Detalles Constructivos</h5>
-            <a href="#" class="descargas-btn">Online</a>
-            <a href="#" class="descargas-btn">PDF</a>
+            <a href="#" class="descargas-btn" target="_blank">Online</a>
+            <a href="#" class="descargas-btn" download>PDF</a>
             <a href="#" class="descargas-btn">Online</a>
             <a href="#" class="descargas-btn">PDF</a>
           </div>
         </div>
-        <div
-          class="descargas-suscribete"
-          w3-include-html="descargas-suscribete.html"
-        ></div>
+        <div class="descargas-suscribete"></div>
       </div>
       <div class="close-btn js-close"></div>
     </div>
@@ -577,6 +573,7 @@
               </div>
             </div>
           </div>
+          <div class="js-carousel-btn btn"></div>
           <div class="js-carousel-prev btn prev">prev</div>
           <div class="js-carousel-next btn next">next</div>
         </div>
@@ -626,9 +623,5 @@
       </div>
       <div class="close-btn js-close"></div>
     </div>
-
-    <script>
-      includeHTML();
-    </script>
   </body>
 </html>

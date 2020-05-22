@@ -1,35 +1,44 @@
 $(document).ready(function () {
-  // Burguer icon
+  $("header").load("header.html", function () {
+    // Burguer icon
 
-  $(".burguer").click(function () {
-    $(this).toggleClass("active");
-    $(".header-menu-overlay").fadeToggle();
-  });
+    $(".burguer").click(function () {
+      console.log("burger");
+      $(this).toggleClass("active");
+      $(".header-menu-overlay").fadeToggle();
+    });
 
-  // Dropdown menu for Productos
+    // Header sticky for desktop
 
-  $(".menu-productos").mouseover(function () {
-    $(this).addClass("active");
-  });
+    $(function () {
+      var header = $(".header");
+      $(window).scroll(function () {
+        var scroll = $(window).scrollTop();
 
-  $(".menu-productos,.top-submenu").mouseout(function () {
-    $(this).removeClass("active");
-  });
+        if (scroll >= 50) {
+          header.addClass("sticky");
+        } else {
+          header.removeClass("sticky");
+        }
+      });
+    });
 
-  // Header sticky for desktop
+    // Dropdown menu for Productos
 
-  $(function () {
-    var header = $(".header");
-    $(window).scroll(function () {
-      var scroll = $(window).scrollTop();
+    $(".menu-productos").mouseover(function () {
+      $(this).addClass("active");
+    });
 
-      if (scroll >= 50) {
-        header.addClass("sticky");
-      } else {
-        header.removeClass("sticky");
-      }
+    $(".menu-productos,.top-submenu").mouseout(function () {
+      $(this).removeClass("active");
     });
   });
+
+  $("footer").load("footer.html");
+
+  $(".contact-box").load("contacto-modulo.html");
+
+  $(".descargas-suscribete").load("descargas-suscribete.html");
 
   // Overlay Descargas
 
@@ -40,7 +49,9 @@ $(document).ready(function () {
 
   // Overlay Galerías y Videos
 
-  $(".base-grid > div, .overlay-categorias-btns > div").click(function () {
+  $(
+    ".base-grid > div, .overlay-categorias-btns > div, .overlay-categorias-btns > a"
+  ).click(function () {
     var overlayName = this.className;
 
     if ($(this).parents(".overlay-wrapper").length) {
