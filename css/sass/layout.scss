@@ -22,6 +22,13 @@ body {
   @include breakpoint(desktop) {
     padding: 30px 0;
     max-width: 1020px;
+    align-items: center;
+  }
+
+  &.no-center {
+    @include breakpoint(desktop) {
+      align-items: flex-start;
+    }
   }
 
   &.small {
@@ -73,6 +80,7 @@ body {
 
   .wrapper {
     flex-direction: column;
+    align-items: flex-start;
   }
 
   .page-top-text {

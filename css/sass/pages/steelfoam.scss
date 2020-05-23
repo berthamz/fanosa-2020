@@ -1,0 +1,17 @@
+.producto-bg-right.steelfoam {
+  @include breakpoint(desktop) {
+    margin-bottom: -210px;
+  }
+}
+
+.producto-bg-right.steelfoam-techo {
+  @include breakpoint(desktop) {
+    margin-bottom: -60px;
+  }
+}
+
+.feature-producto-right.steelfoam-techo {
+  @include breakpoint(desktop) {
+    margin-bottom: -40px;
+  }
+}
