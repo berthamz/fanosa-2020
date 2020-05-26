@@ -3,6 +3,10 @@ h1 {
   margin: 0 0 20px;
   text-transform: uppercase;
   font: 800 $txt-xl $font-title;
+
+  &.nobreak {
+    hyphens: none;
+  }
 }
 
 h2 {
@@ -155,7 +159,7 @@ div.no-padding-bottom {
 
     @include breakpoint(desktop) {
       top: 65px;
-      right: calc(50% - 495px);
+      right: calc(50% - 490px);
     }
   }
 

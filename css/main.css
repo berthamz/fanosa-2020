@@ -5,6 +5,8 @@ h1, .contacto-phone-large {
   margin: 0 0 20px;
   text-transform: uppercase;
   font: 800 40px "Montserrat", sans-serif; }
+  h1.nobreak, .nobreak.contacto-phone-large {
+    hyphens: none; }
 
 h2 {
   margin: 0 0 20px;
@@ -125,7 +127,7 @@ div.no-padding-bottom {
     @media (min-width: 1024px) {
       .overlay-base .close-btn {
         top: 65px;
-        right: calc(50% - 495px); } }
+        right: calc(50% - 490px); } }
   .overlay-base h1, .overlay-base .contacto-phone-large {
     width: 100%;
     color: #2a66b1;
@@ -1023,8 +1025,8 @@ footer {
     padding: 20px 10px; }
     @media (min-width: 1024px) {
       .wrapper-descargas-overlay .descargas-single {
-        width: 47%;
-        padding: 20px; } }
+        padding: 20px;
+        max-width: 45%; } }
   .wrapper-descargas-overlay .descargas-single-icon {
     width: 85px;
     height: auto;
@@ -1164,7 +1166,8 @@ footer {
       overflow: hidden;
       min-width: 290px;
       margin-bottom: 30px;
-      margin: 0 20px 30px; }
+      margin: 0 20px 30px;
+      max-width: none; }
   .overlay-wrapper .grid-base-wrapper .base-grid {
     height: 210px;
     min-width: 210px;
@@ -1302,7 +1305,8 @@ footer {
     margin: 20px auto; }
 
 .productos-videos h1, .productos-videos .contacto-phone-large {
-  width: 100%; }
+  width: 100%;
+  text-align: center; }
 
 .home-01 {
   z-index: 2;

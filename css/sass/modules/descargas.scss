@@ -64,8 +64,8 @@
     padding: 20px 10px;
 
     @include breakpoint(desktop) {
-      width: 47%;
       padding: 20px;
+      max-width: 45%;
     }
   }
 
