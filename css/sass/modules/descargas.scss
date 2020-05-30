@@ -22,6 +22,7 @@
   background: $color-main;
   justify-content: center;
   width: calc(100% - 100px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 
   @include breakpoint(desktop) {
     padding: 30px;

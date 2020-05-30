@@ -1,0 +1,15 @@
+.pdto-wrapper-img.aislaterm {
+  .producto-bg-right {
+    margin-bottom: -90px;
+    @include breakpoint(desktop) {
+      margin-bottom: -210px;
+    }
+  }
+
+  .feature-producto-right {
+    max-width: 420px;
+    @include breakpoint(desktop) {
+      margin-left: -120px;
+    }
+  }
+}

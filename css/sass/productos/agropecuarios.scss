@@ -1,0 +1,30 @@
+.pdto-wrapper-img.agropecuarios {
+  .producto-bg-right {
+    margin-bottom: -70px;
+    @include breakpoint(desktop) {
+      margin-bottom: -170px;
+    }
+  }
+
+  .feature-producto-right {
+    @include breakpoint(desktop) {
+      margin-left: -100px;
+    }
+  }
+}
+
+.pdto-wrapper-img.mariscos {
+  .producto-bg-right {
+    margin-bottom: -70px;
+    @include breakpoint(desktop) {
+      margin-bottom: -180px;
+    }
+  }
+
+  .feature-producto-right {
+    max-width: 500px;
+    @include breakpoint(desktop) {
+      margin-left: -120px;
+    }
+  }
+}

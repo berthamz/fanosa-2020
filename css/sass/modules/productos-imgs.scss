@@ -34,11 +34,11 @@
   }
 
   .feature-producto-right {
-    margin-bottom: -60px;
+    margin-bottom: -50px;
 
     @include breakpoint(desktop) {
       margin-left: -150px;
-      margin-bottom: -80px;
+      margin-bottom: -70px;
     }
   }
 }

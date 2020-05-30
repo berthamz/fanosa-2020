@@ -12,6 +12,7 @@
     margin-top: 10px;
   }
 }
+
 .contacto-phone-large {
   @extend h1;
   display: block;
@@ -58,21 +59,16 @@
   color: $color-bg;
   max-width: 800px;
   border-radius: $br;
+  width: calc(100% - 30px);
   margin: -50px auto 20px;
-  padding: 30px 10px 15px;
+  padding: 30px 15px 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 
   @include breakpoint(desktop) {
     flex-wrap: nowrap;
-    margin-top: -90px;
-    padding: 50px 20px 30px;
+    margin-top: -70px;
+    padding: 50px 30px 30px;
     justify-content: space-between;
-  }
-
-  .cobertura-left,
-  .cobertura-right {
-    width: 45%;
-    min-width: 250px;
-    text-align: left;
   }
 
   select {
@@ -93,12 +89,27 @@
       color: $color-body;
     }
   }
+}
 
-  .cobertura-right {
-    padding: 15px;
-    border-radius: $br;
-    background: $color-bg;
+.cobertura-left,
+.cobertura-right {
+  flex: 1 1 45%;
+  min-width: 350px;
+  text-align: left;
+  padding: 0 15px;
+}
+
+.cobertura-left {
+  h1 {
+    font-size: 36px;
+    margin-bottom: 15px;
   }
+}
+
+.cobertura-right {
+  padding: 15px;
+  border-radius: $br;
+  background: $color-bg;
 
   .cobertura-ciudad {
     display: none;
