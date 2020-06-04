@@ -1,0 +1,15 @@
+.pdto-wrapper-img.bovedilla {
+  .producto-bg-right {
+    margin-bottom: -50px;
+    @include breakpoint(desktop) {
+      margin-bottom: -100px;
+    }
+  }
+
+  .feature-producto-right {
+    margin-bottom: -30px;
+    @include breakpoint(desktop) {
+      margin-bottom: -50px;
+    }
+  }
+}

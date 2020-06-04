@@ -21,6 +21,15 @@
   @include breakpoint(desktop) {
     font-size: $txt-xl + 10px;
   }
+
+  &.transparencia-phone-text {
+    margin: 20px 0;
+    color: $color-bg;
+
+    &:hover {
+      color: $color-main;
+    }
+  }
 }
 
 .cobertura {

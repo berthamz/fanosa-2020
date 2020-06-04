@@ -16,6 +16,12 @@
     justify-content: space-around;
   }
 
+  &.transparencia {
+    @include breakpoint(desktop) {
+      align-items: center;
+    }
+  }
+
   .bloque-half {
     margin: 20px 0;
     @include breakpoint(desktop) {
