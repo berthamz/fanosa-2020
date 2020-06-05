@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FANOSA®️</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="stylesheet" href="../css/main.css" />
+    <script type="text/javascript" src="../js/jquery-3.5.0.min.js"></script>
+    <script type="text/javascript" src="../js/main.js"></script>
+  </head>
+
+  <body>
+    <header></header>
+
+    <div class="wrapper calculadora-resultados">
+      <div class="calculadora-top">
+        <div class="calculadora-top-text">
+          <h1 class="blue">Calcula <br />tu ahorro</h1>
+        </div>
+        <img src="../images/icon-calculadora-orange.svg" alt="Calculadora" />
+      </div>
+      <div class="division">
+        <div class="explicacion">
+          El siguiente cálculo fue realizado considerando los datos climáticos
+          promedio de HERMOSILLO, Considerando un área de 1,000 mts2 con puertas
+          y ventanas estandar, ailamiento de 2” en techos y de 2” en muros.
+          Considerando un consumo del 50% del gasto eléctrico en aire
+          acondicionado (A/C). Los resultados son aproximados e ilustrativos,
+          FANOSA® no se hace responsable por el uso que se le dé a los mismos.
+        </div>
+        <div class="resultado">
+          <span class="orange">Con Aislante <br />Térmico en muros</span>
+          Entrará:
+          <h2 class="blue">-35%</h2>
+          Calor a tu casa. <br />
+          Podrías ahorrar en electricidad hasta:
+          <h2 class="orange">-17.5%</h2>
+        </div>
+        <div class="resultado">
+          <span class="orange">Con Aislante <br />Térmico en techo</span>
+          Entrará:
+          <h2 class="blue">-40%</h2>
+          Calor a tu casa. <br />
+          Podrías ahorrar en electricidad hasta:
+          <h2 class="orange">-20%</h2>
+        </div>
+        <div class="resultado">
+          <span class="orange"
+            >Con Aislante Térmico <br />en muros y techo</span
+          >
+          Entrará:
+          <h2 class="blue">-70%</h2>
+          Calor a tu casa. <br />
+          Podrías ahorrar en electricidad hasta:
+          <h2 class="orange">-37.5%</h2>
+        </div>
+      </div>
+      <div class="division final">
+        <div class="calculadora-graficas">
+          <b>Ejemplo de consumo en energía eléctrica:</b>
+          <div class="iconos-resultados">
+            <p>Consumo eléctrico promedio sin aislante térmico.</p>
+            <img
+              src="../images/calculadora-iconos-top.svg"
+              alt="Resultados sin aislar"
+            />
+          </div>
+          <div class="iconos-resultados">
+            <p>
+              Consumo eléctrico promedio con aislante térmico en muros y techo.
+            </p>
+            <div class="iconos-aislar-img">
+              <img
+                src="../images/calculadora-iconos-bottom.svg"
+                alt="Resultados aislando"
+              />
+              <div class="pct" id="pct-gasto">15%</div>
+              <div class="pct" id="pct-ahorro">35%</div>
+            </div>
+          </div>
+        </div>
+        <h3 class="orange">¿Qué significa esto?</h3>
+        <p>
+          Entre más aislada esté tu casa, menos será el calor que entra y el
+          frío que sale de ella, lo que significa que gastas menos electricidad
+          en enfriarla en verano y calentarla en invierno. Generalmente el 50%
+          del gasto eléctrico en verano es el consumo del aire acondicionado
+          (A/C), el resto son los electrodomésticos e iluminación que usamos día
+          a día, entonces, para calcular el ahorro en electricidad que puedes
+          tener aislando tu casa, consideramos un menor consumo en aire
+          acondicionado (A/C).
+        </p>
+        <input
+          type="button"
+          id="btnReiniciar"
+          name="btnReiniciar"
+          value="Reiniciar"
+          class="btn-grey"
+        />
+      </div>
+    </div>
+
+    <footer></footer>
+  </body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FANOSA®️</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="stylesheet" href="../css/main.css" />
+    <script type="text/javascript" src="../js/jquery-3.5.0.min.js"></script>
+    <script type="text/javascript" src="../js/carousel.js"></script>
+    <script type="text/javascript" src="../js/main.js"></script>
+  </head>
+
+  <body>
+    <header></header>
+
+    <div id="slideshow-home" class="slideshow-home">
+      <div class="js-carousel-viewer"></div>
+      <div class="js-carousel-items">
+        <div class="carousel-home">
+          <img src="../images/home-slideshow-01.jpg" alt="En todas tus obras" />
+          <div class="carousel-slide">
+            <div class="wrapper">
+              <h1>EN TODAS TUS OBRAS, EN TODO LUGAR.</h1>
+              <p>
+                Entregamos el material que necesitas, cuando y donde lo
+                requieras.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-home">
+          <img
+            src="../images/home-slideshow-02.jpg"
+            alt="Aisla, Protege y Ahorra"
+          />
+          <div class="carousel-slide">
+            <div class="wrapper">
+              <h1>
+                AISLA, PROTEGE <br />
+                Y AHORRA.
+              </h1>
+              <p>
+                Si buscas aislar, proteger o ahorrar, tenemos lo que buscas.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-home">
+          <img src="../images/home-slideshow-03.jpg" alt="En equipo contigo" />
+          <div class="carousel-slide">
+            <div class="wrapper">
+              <h1>
+                EN EQUIPO <br />
+                CONTIGO.
+              </h1>
+              <p>
+                Juntos encontrarémos la solución más adecuada para tu proyecto.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="js-carousel-btn buttons"></div>
+    </div>
+    <script>
+      $(document).ready(function () {
+        carousel.init({ target: "slideshow-home", hold: 6000 });
+      });
+    </script>
+
+    <div class="wrapper home-01">
+      <div class="wrapper-half-small">
+        <h1>POR UN PLANETA SUSTENTABLE</h1>
+        <p>
+          Para nosotros la sustentabilidad es una prioridad, conoce nuestra
+          política ambiental, nuestras certificaciones y los compromisos que
+          hemos hecho por tener un planeta más verde.
+        </p>
+        <a href="sustentable.html" class="btn-orange">Ver más</a>
+      </div>
+      <div class="wrapper-half">
+        <img src="../images/home-img01.png" alt="Por un planeta sustentable" />
+      </div>
+    </div>
+
+    <div class="grey-bg home-02">
+      <div class="wrapper no-center">
+        <div class="wrapper-half home-02-txt">
+          <h1 class="white">FANOSA® <br />EN TU OBRA</h1>
+          <p>
+            Si buscas aislar, aligerar o ahorrar, tenemos la solución, encuentra
+            todo lo que necesitas saber acerca de nuestros productos y sistemas
+            constructivos.
+          </p>
+          <a href="#" class="btn-orange">Conoce más</a>
+        </div>
+        <div class="wrapper-half home-02-img">
+          <img src="../images/home-img02.jpg" alt="FANOSA®️ en tu obra" />
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-box no-padding"></div>
+
+    <footer></footer>
+  </body>
+</html>
