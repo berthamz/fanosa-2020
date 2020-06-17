@@ -596,7 +596,7 @@ footer {
   @media (min-width: 1024px) {
     .footer-left,
     .footer-right {
-      width: 420px; } }
+      width: 430px; } }
 
 .footer-left {
   display: flex;
