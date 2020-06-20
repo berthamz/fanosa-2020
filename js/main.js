@@ -67,6 +67,11 @@ $(document).ready(function () {
   $(".js-close").click(function () {
     $("body").removeClass("noscroll");
     $(".overlay-base").fadeOut(100);
+
+    $(".youtube-video").each(function () {
+      var el_src = $(this).attr("src");
+      $(this).attr("src", el_src);
+    });
   });
 
   // Select Contacto
