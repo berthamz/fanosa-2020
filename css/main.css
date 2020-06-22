@@ -134,6 +134,9 @@ div.no-padding-bottom {
     text-align: center;
     margin: 20px 0 30px; }
 
+.nobreak {
+  white-space: nowrap; }
+
 body {
   margin: 0;
   padding-top: 50px;
