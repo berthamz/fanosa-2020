@@ -6,7 +6,8 @@ h1, .contacto-phone-large {
   text-transform: uppercase;
   font: 800 40px "Montserrat", sans-serif; }
   h1.nobreak, .nobreak.contacto-phone-large {
-    hyphens: none; }
+    hyphens: none;
+    white-space: normal; }
 
 h2 {
   margin: 0 0 20px;
@@ -1728,6 +1729,11 @@ footer {
     right: 38.5%; }
   .calculadora-graficas .iconos-aislar-img #pct-gasto {
     right: 13%; } }
+.transparencia a {
+  color: #ffffff; }
+  .transparencia a:hover {
+    color: #ed7f22; }
+
 .transparencia-otras {
   display: flex;
   flex-wrap: wrap;
@@ -2146,7 +2152,7 @@ footer {
     margin: 20px 0;
     color: #ffffff; }
     .contacto-phone-large.transparencia-phone-text:hover {
-      color: #2a66b1; }
+      color: #ed7f22; }
 
 .cobertura {
   text-align: center; }
