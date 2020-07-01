@@ -600,7 +600,7 @@ footer {
   @media (min-width: 1024px) {
     .footer-left,
     .footer-right {
-      width: 430px; } }
+      width: 440px; } }
 
 .footer-left {
   display: flex;
