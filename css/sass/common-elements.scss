@@ -34,6 +34,14 @@ a {
   &:hover {
     color: $color-second;
   }
+
+  &.inline-link {
+    color: $color-second;
+
+    &:hover {
+      color: lighten($color-second, 15%);
+    }
+  }
 }
 
 b,
@@ -90,6 +98,10 @@ div.no-padding-bottom {
   &.btn-producto {
     width: auto;
     display: inline-block;
+  }
+  h1 & {
+    float: right;
+    margin: 0 20px 10px;
   }
 }
 

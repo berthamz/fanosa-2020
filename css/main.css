@@ -28,6 +28,10 @@ a {
   transition: all ease 0.25s; }
   a:hover {
     color: #ed7f22; }
+  a.inline-link {
+    color: #ed7f22; }
+    a.inline-link:hover {
+      color: #f3a869; }
 
 b,
 strong {
@@ -72,6 +76,9 @@ div.no-padding-bottom {
   .btn-orange.btn-producto, .btn-producto.btn-grey {
     width: auto;
     display: inline-block; }
+  h1 .btn-orange, .contacto-phone-large .btn-orange, h1 .btn-grey, .contacto-phone-large .btn-grey {
+    float: right;
+    margin: 0 20px 10px; }
 
 .btn-grey {
   background: #4b4f53; }
@@ -1415,14 +1422,14 @@ footer {
   margin: 40px 0;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; }
+  justify-content: space-evenly; }
   @media (min-width: 1024px) {
     .calculadora-top {
       flex-wrap: nowrap;
       justify-content: space-between; } }
   .calculadora-top .calculadora-top-text {
     max-width: 600px;
-    margin-right: 20px; }
+    margin-right: auto; }
     @media (min-width: 1024px) {
       .calculadora-top .calculadora-top-text {
         order: 1; } }

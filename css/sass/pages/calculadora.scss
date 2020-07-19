@@ -10,7 +10,7 @@
   margin: 40px 0;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-evenly;
 
   @include breakpoint(desktop) {
     flex-wrap: nowrap;
@@ -19,7 +19,7 @@
 
   .calculadora-top-text {
     max-width: 600px;
-    margin-right: 20px;
+    margin-right: auto;
 
     @include breakpoint(desktop) {
       order: 1;
