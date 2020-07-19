@@ -69,6 +69,9 @@ div.no-padding-bottom {
   .btn-orange:hover, .btn-grey:hover {
     color: #ffffff;
     background: #cb6611; }
+  .btn-orange.btn-producto, .btn-producto.btn-grey {
+    width: auto;
+    display: inline-block; }
 
 .btn-grey {
   background: #4b4f53; }

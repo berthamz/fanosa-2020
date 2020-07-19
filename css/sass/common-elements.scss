@@ -86,6 +86,11 @@ div.no-padding-bottom {
     color: $color-bg;
     background: darken($color-second, 10%);
   }
+
+  &.btn-producto {
+    width: auto;
+    display: inline-block;
+  }
 }
 
 .btn-grey {
