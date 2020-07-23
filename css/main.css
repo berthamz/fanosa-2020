@@ -1866,6 +1866,10 @@ footer {
     @media (min-width: 1024px) {
       .sustentable-03 img {
         margin-top: -100px; } }
+  .sustentable-03 ul {
+    padding: 0 0 0 20px; }
+  .sustentable-03 li {
+    margin: 10px 0; }
 
 .experiencia-01 .wrapper-half-small {
   padding-bottom: 40px; }
