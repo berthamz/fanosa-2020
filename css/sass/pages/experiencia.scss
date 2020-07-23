@@ -20,6 +20,53 @@
     margin-bottom: 0;
     font-size: calc(#{$txt-l} - 1px);
   }
+
+  .experiencia-clientes-list {
+    list-style: none;
+    font-weight: bold;
+    padding: 0;
+
+    @include breakpoint(desktop) {
+      max-width: calc(100% - 100px);
+    }
+
+    li {
+      margin-bottom: 20px;
+    }
+  }
+
+  .experiencia-cliente-img {
+    max-width: 400px;
+    width: 80%;
+    display: block;
+    margin: 0 auto 20px;
+
+    @include breakpoint(desktop) {
+      margin: 0 0 20px;
+    }
+  }
+
+  .clientes-asesores {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+
+    @include breakpoint(desktop) {
+      justify-content: space-between;
+    }
+
+    a {
+      width: 130px;
+      height: 20px;
+      margin-right: 20px;
+    }
+
+    p {
+      width: calc(100% - 180px);
+      min-width: 320px;
+    }
+  }
 }
 
 .experiencia-02 {

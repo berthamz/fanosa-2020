@@ -72,21 +72,21 @@
               name="nombre"
               id="nombre"
               class="info-forma-text"
-              placeholder="Nombre"
+              placeholder="Nombre (obligatorio)"
             />
             <input
               type="email"
               name="correo"
               id="correo"
               class="info-forma-text"
-              placeholder="Correo"
+              placeholder="Correo (obligatorio)"
             />
             <input
               type="tel"
               name="telefono"
               id="telefono"
               class="info-forma-text"
-              placeholder="Teléfono"
+              placeholder="Teléfono (obligatorio)"
             />
             <input
               type="text"
@@ -99,7 +99,7 @@
               name="interes"
               id="interes"
               class="info-forma-text forma-interes"
-              placeholder="Área de interés"
+              placeholder="Área de interés (obligatorio)"
             >
               <option value="0">Área de interés (obligatorio)</option>
               <option value="1">Contabilidad</option>
@@ -126,15 +126,19 @@
               cols="40"
               rows="10"
               class="info-forma-text"
-              placeholder="Resumen de Experiencia"
+              placeholder="Resumen de Experiencia  (obligatorio)"
             ></textarea>
             <input
               type="file"
               name="cv"
               id="cv"
-              class="info-forma-text"
+              class="info-forma-text info-forma-cv"
               placeholder="Agregar currículum"
             />
+            <span class="checkbox-privacidad">
+              (Solo archivos de tipo .doc, .docx o PDF permitidos)
+            </span>
+            <br />
             <span class="checkbox-privacidad"
               ><input
                 type="checkbox"

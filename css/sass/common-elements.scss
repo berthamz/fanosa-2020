@@ -8,6 +8,10 @@ h1 {
     hyphens: none;
     white-space: normal;
   }
+
+  &.nomayus {
+    text-transform: none;
+  }
 }
 
 h2 {
@@ -99,6 +103,11 @@ div.no-padding-bottom {
     width: auto;
     display: inline-block;
   }
+
+  &.btn-experiencia {
+    margin: 0;
+  }
+
   h1 & {
     float: right;
     margin: 0 20px 10px;
