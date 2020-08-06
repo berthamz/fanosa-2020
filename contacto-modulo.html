@@ -1,4 +1,6 @@
-<div class="wrapper small no-center">
+<script src="js/jquery.loadmask.min.js"></script>
+<link href="css/jquery.loadmask.css" rel="stylesheet" />
+<div class="wrapper small no-center" id="contacto-modulo">
   <div class="wrapper-half-small">
     <h1 class="blue">Tu Asesor Personal</h1>
     <p>
@@ -20,9 +22,11 @@
         contigo.
       </p>
       <form action="#" class="contact-form-module">
-        <input type="text" class="contact-module-input" placeholder="Nombre*" />
+        <input type="text" class="contact-module-input" placeholder="Nombre*" id="nombre" name="nombre" />
         <input
           type="text"
+               id="apellido"
+               name="apellido"
           class="contact-module-input"
           placeholder="Apellido*"
         />
@@ -45,9 +49,10 @@
           Acepto <a href="privacidad.html">política de privacidad</a>.
         </span>
         <input
-          type="submit"
+          type="button"          
           value="Enviar"
-          class="btn-orange contact-module-send"
+          class="btn-orange contact-module-send"          
+          onclick="EnviaCorreo(0)"
         />
       </form>
     </div>

@@ -1,22 +1,24 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FANOSA®️</title>
     <meta name="description" content="Empresa líder en la fabricación de productos de Poliestireno Expandido (EPS)." />
     <meta name="keywords"
-      content="panel w, sistema constructivo, vigueta y bovedilla, viguetas y bovedillas, venta de panel, bovedilla de poliestireno, cuarto frio, aislantes termicos, losa de vigueta y bovedilla, caseton de poliestireno, precio de viguetas, venta de materiales para construccion, muros prefabricados, vigueta y bovedilla de poliestireno, concreto ligero, sistemas constructivos modernos, losas aligeradas, bloques de poliestireno, sistemas prefabricados, aislamiento termico para techos, construccion de muros, aligerante para concreto, caseton poliestireno, sistemas constructivos de losas, fabrica de poliestireno, aislantes termicos para techos, aislante termico para paredes, perla aligerante, perla para concreto, techos prefabricados ligeros, precio" />
+          content="panel w, sistema constructivo, vigueta y bovedilla, viguetas y bovedillas, venta de panel, bovedilla de poliestireno, cuarto frio, aislantes termicos, losa de vigueta y bovedilla, caseton de poliestireno, precio de viguetas, venta de materiales para construccion, muros prefabricados, vigueta y bovedilla de poliestireno, concreto ligero, sistemas constructivos modernos, losas aligeradas, bloques de poliestireno, sistemas prefabricados, aislamiento termico para techos, construccion de muros, aligerante para concreto, caseton poliestireno, sistemas constructivos de losas, fabrica de poliestireno, aislantes termicos para techos, aislante termico para paredes, perla aligerante, perla para concreto, techos prefabricados ligeros, precio" />
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
     <link rel="stylesheet" href="css/main.css" />
     <script type="text/javascript" src="js/jquery-3.5.0.min.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
+    <script src="js/jquery.loadmask.min.js"></script>
+    <link href="css/jquery.loadmask.css" rel="stylesheet" />
     <meta property="og:title" content="FANOSA®" />
     <meta property="og:description" content="Empresa líder en la fabricación de productos de Poliestireno
                   Expandido (EPS)." />
     <meta property="og:image" content="https://www.fanosa.com/images/Fanosa-social.png" />
     <meta property="og:url" content="https://www.fanosa.com/" />
-  </head>
+</head>
 
   <body>
     <!-- Google Tag Manager (noscript) -->
@@ -55,15 +57,17 @@
           </p>
           <a href="tel:8002326672" class="contacto-phone-large">800 232 6672</a>
         </div>
-        <div class="wrapper-half-small">
+        <div class="wrapper-half-small" id="contacto-modulo">
           <form action="#" class="contact-form-page">
             <input
               type="text"
+              id="nombre"
               class="contact-module-input"
               placeholder="Nombre*"
             />
             <input
               type="text"
+              id="apellido"
               class="contact-module-input"
               placeholder="Apellido*"
             />
@@ -94,9 +98,11 @@
               Acepto <a href="privacidad.html">política de privacidad</a>.
             </span>
             <input
-              type="submit"
+              type="button"
+              id="boton_enviar"
               value="Enviar"
-              class="btn-orange contact-module-send"
+              class="btn-orange contact-module-send"   
+              onclick="EnviaCorreo(0)"
             />
           </form>
         </div>

@@ -1,4 +1,6 @@
-<div class="wrapper small no-center">
+<script src="../js/jquery.loadmask.min.js"></script>
+<link href="../css/jquery.loadmask.css" rel="stylesheet" />
+<div class="wrapper small no-center" id="contacto-modulo">
   <div class="wrapper-half-small">
     <h1 class="blue">PERSONAL CONSULTANT</h1>
     <p>
@@ -20,11 +22,13 @@
         you.
       </p>
       <form action="#" class="contact-form-module">
-        <input type="text" class="contact-module-input" placeholder="Name*" />
+        <input type="text" class="contact-module-input" placeholder="Name*" id="nombre" name="nombre" />
         <input
           type="text"
           class="contact-module-input"
           placeholder="Lastname*"
+          id="apellido"
+          name="apellido"
         />
         <input
           type="tel"
@@ -45,9 +49,10 @@
           I accept the <a href="privacidad.html">terms and conditions</a>.
         </span>
         <input
-          type="submit"
+          type="button"
           value="Send"
           class="btn-orange contact-module-send"
+          onclick="EnviaCorreo(1)"
         />
       </form>
     </div>

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="../css/main.css" />
     <script type="text/javascript" src="../js/jquery-3.5.0.min.js"></script>
     <script type="text/javascript" src="../js/main.js"></script>
+    <script src="../js/jquery.loadmask.min.js"></script>
+    <link href="../css/jquery.loadmask.css" rel="stylesheet" />
     <meta property="og:title" content="FANOSA®" />
     <meta
       property="og:description"
@@ -52,7 +54,7 @@
     </div>
 
     <div class="wrapper">
-      <div class="bloque-info-forma">
+      <div class="bloque-info-forma" id="forma-trabajo">
         <div class="bloque-half">
           <p>
             Welcome, we invite you to know all the development possibilities
@@ -134,6 +136,7 @@
               type="file"
               name="cv"
               id="cv"
+              accept=".doc,.docx,.pdf"
               class="info-forma-text info-forma-cv"
               placeholder="Attach CV"
             />
@@ -145,12 +148,12 @@
               ><input
                 type="checkbox"
                 name="privacidad"
-                id="checkbox-privacidad"
+                id="privacidad"
               />
               I accept the
               <a href="privacidad.html">Privacy Policies</a></span
             >
-            <input type="submit" value="Send" class="btn-orange" />
+            <input type="button" value="Send" class="btn-orange" onclick="EnviaCorreoTrabajo(1)" />
             <!-- NOTA: ENVIAR CORREO A empleosweb@fanosa.com-->
           </form>
         </div>

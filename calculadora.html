@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
@@ -16,6 +16,10 @@
     <link rel="stylesheet" href="css/main.css" />
     <script type="text/javascript" src="js/jquery-3.5.0.min.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
+    <script src="js/fanosa.js"></script>
+    <script src="js/info.js"></script>
+    <script src="js/jquery.loadmask.min.js"></script>
+    <link href="css/jquery.loadmask.css" rel="stylesheet" />
     <meta property="og:title" content="FANOSA®" />
     <meta
       property="og:description"
@@ -30,168 +34,360 @@
   </head>
 
   <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript
-      ><iframe
-        src="https://www.googletagmanager.com/ns.html?id=GTM-KW8JFQH"
-        height="0"
-        width="0"
-        style="display: none; visibility: hidden;"
-      ></iframe
-    ></noscript>
-    <!-- End Google Tag Manager (noscript) -->
+      <!-- Google Tag Manager (noscript) -->
+      <noscript>
+          <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KW8JFQH"
+                  height="0"
+                  width="0"
+                  style="display: none; visibility: hidden;"></iframe>
+      </noscript>
+      <!-- End Google Tag Manager (noscript) -->
 
-    <header></header>
+      <header></header>
 
-    <div class="wrapper calculadora">
-      <div class="calculadora-top">
-        <div class="calculadora-top-text">
-          <h1 class="blue">Calcula <br />tu ahorro</h1>
-          <p>
-            Calcular el ahorro energético que tendrá una vivienda depende de
-            multiples factores, en FANOSA® hemos diseñado una calculadora que te
-            dará un número aproximado del ahorro energético que podrás tener si
-            haces tu proyecto con el aislamiento térmico que brindan nuestros
-            productos.
-          </p>
-        </div>
-        <img src="images/icon-calculadora-orange.svg" alt="Calculadora" />
+      <div class="wrapper calculadora" id="calculos">
+          <div class="calculadora-top">
+              <div class="calculadora-top-text">
+                  <h1 class="blue">Calcula <br />tu ahorro</h1>
+                  <p>
+                      Calcular el ahorro energético que tendrá una vivienda depende de
+                      multiples factores, en FANOSA® hemos diseñado una calculadora que te
+                      dará un número aproximado del ahorro energético que podrás tener si
+                      haces tu proyecto con el aislamiento térmico que brindan nuestros
+                      productos.
+                  </p>
+              </div>
+              <img src="images/icon-calculadora-orange.svg" alt="Calculadora" />
+          </div>
+          <div class="division">
+              <div class="numero">1</div>
+              <div class="label-container">
+                  <div class="label">
+                      <b>Ciudad:</b> <br />
+                      Elige la ciudad donde se construirá la obra, si no encuentras tu
+                      ciudad, selecciona la que tenga las características de temperatura y
+                      altura más parecidas.
+                  </div>
+                  <select name="cboCiudad" id="cboCiudad">
+                      <option value="0">Seleccionar Ciudad</option>
+                  </select>
+                  <input type="hidden" id="sLatitud" />
+                  <input type="hidden" id="sTemp" />
+                  <input type="hidden" id="sTdiaria" />
+                  <input type="hidden" id="sFactor" />
+              </div>
+          </div>
+          <div class="division dos">
+              <div class="numero">2</div>
+              <div class="label-container">
+                  <div class="label">
+                      <b>¿Hacia donde esta orientada la fachada?</b> <br />
+                      Al pararte en la puerta principal, con la casa en la espalda, ¿hacia
+                      donde estas viendo?
+                  </div>
+                  <select id="sOrientacion">
+                      <option value="0">Norte</option>
+                      <option value="1">Sur</option>
+                      <option value="2">Este</option>
+                      <option value="3">Oeste</option>
+                  </select>
+                  <br />
+                  <div class="label">
+                      <b>¿Su vivienda es de 1 o 2 pisos?</b>
+                  </div>
+                  <select id="sNiveles">
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                  </select>
+                  <br />
+                  <div class="label">
+                      <b>¿De qué material son los muros de su vivienda?</b>
+                  </div>
+                  <select id="sMurosMaterial">
+                      <option value="0">Block de Cemento</option>
+                      <option value="1">Ladrillo</option>
+                  </select>
+                  <br />
+                  <div class="label">
+                      <b>¿De qué material es el techo de su vivienda?</b>
+                  </div>
+                  <select id="sTechoMaterial">
+                      <option value="0">Losa de Concreto</option>
+                      <option value="1">Vigueta y Bovedilla</option>
+                      <option value="2">Nervada (casetón)</option>
+                  </select>
+                  <br />
+              </div>
+              <div class="casa casa01"></div>
+          </div>
+          <div class="division">
+              <div class="numero">3</div>
+              <div class="label-container">
+                  <p>
+                      Para facilitar el método de análisis es necesario suponer la
+                      geometría de la vivienda como rectangular. Mide el ancho y la
+                      profundidad de tu casa sin tomar en cuenta desfases y salientes.
+                  </p>
+                  <div class="label">
+                      <b>¿Cuál es el ancho del frente (A)?</b>
+                  </div>
+                  <input id="txtAncho" name="txtAncho" type="text" /> <b>Metros</b><br />
+                  <div class="label">
+                      <b>¿Cuál es la profundidad (L)?</b>
+                  </div>
+                  <input id="txtLargo" name="txtLargo" type="text" /> <b>Metros</b>
+              </div>
+              <div class="casa casa02"></div>
+          </div>
+          <div class="division cuatro">
+              <div class="numero">4</div>
+              <div class="label-container">
+                  <p>
+                      <b>
+                          Seleccione la cantidad de puertas y ventanas que hay en cada uno
+                          de los muros exteriores de su vivienda.
+                      </b>
+                      <br />Hemos calculado una medida estándar para las puertas y
+                      ventanas.
+                  </p>
+              </div>
+              <div class="casa casa03">
+                  <div class="label top left">
+                      <span>Puertas</span>
+                      <select id="sPuertasNorte" style="width: 50px">
+                          <option value="0">0</option>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                          <option value="6">6</option>
+                          <option value="7">7</option>
+                          <option value="8">8</option>
+                          <option value="9">9</option>
+                          <option value="10">10</option>
+                      </select><br />
+                      <span>Ventanas</span>
+                      <select id="sVentanasNorte" style="width: 50px">
+                          <option value="0">0</option>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                          <option value="6">6</option>
+                          <option value="7">7</option>
+                          <option value="8">8</option>
+                          <option value="9">9</option>
+                          <option value="10">10</option>
+                      </select>
+                  </div>
+                  <div class="label top right">
+                      <span>Puertas</span>
+                      <select id="sPuertasEste" style="width: 50px">
+                          <option value="0">0</option>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                          <option value="6">6</option>
+                          <option value="7">7</option>
+                          <option value="8">8</option>
+                          <option value="9">9</option>
+                          <option value="10">10</option>
+                      </select><br />
+                      <span>Ventanas</span>
+                      <select id="sVentanasEste" style="width: 50px">
+                          <option value="0">0</option>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                          <option value="6">6</option>
+                          <option value="7">7</option>
+                          <option value="8">8</option>
+                          <option value="9">9</option>
+                          <option value="10">10</option>
+                      </select>
+                  </div>
+                  <div class="label bottom left">
+                      <span>Puertas</span>
+                      <select id="sPuertasOeste" style="width: 50px">
+                          <option value="0">0</option>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                          <option value="6">6</option>
+                          <option value="7">7</option>
+                          <option value="8">8</option>
+                          <option value="9">9</option>
+                          <option value="10">10</option>
+                      </select><br />
+                      <span>Ventanas</span>
+                      <select id="sVentanasOeste" style="width: 50px">
+                          <option value="0">0</option>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                          <option value="6">6</option>
+                          <option value="7">7</option>
+                          <option value="8">8</option>
+                          <option value="9">9</option>
+                          <option value="10">10</option>
+                      </select>
+                  </div>
+                  <div class="label bottom right">
+                      <span>Puertas</span>
+                      <select id="sPuertasSur" style="width: 50px">
+                          <option value="0">0</option>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                          <option value="6">6</option>
+                          <option value="7">7</option>
+                          <option value="8">8</option>
+                          <option value="9">9</option>
+                          <option value="10">10</option>
+                      </select><br />
+                      <span>Ventanas</span>
+                      <select id="sVentanasSur" style="width: 50px">
+                          <option value="0">0</option>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                          <option value="6">6</option>
+                          <option value="7">7</option>
+                          <option value="8">8</option>
+                          <option value="9">9</option>
+                          <option value="10">10</option>
+                      </select>
+                  </div>
+              </div>
+          </div>
+          <div class="division">
+              <p>
+                  Para un número más exacto, te recomendamos contactar a uno de nuestros
+                  asesores quien podrá calcular el ahorro e inclusive hacerte
+                  recomendaciones sobre qué productos utilizar.
+              </p>
+              <input type="button"
+                     id="btnCalcular"
+                     name="btnCalcular"
+                     value="Calcular"
+                     class="btn-calculadora btn-orange" />
+              <input type="button"
+                     id="btnReiniciar"
+                     name="btnReiniciar"
+                     value="Reiniciar"
+                     class="btn-calculadora btn-grey" />
+          </div>
       </div>
-      <div class="division">
-        <div class="numero">1</div>
-        <div class="label-container">
-          <div class="label">
-            <b>Ciudad:</b> <br />
-            Elige la ciudad donde se construirá la obra, si no encuentras tu
-            ciudad, selecciona la que tenga las características de temperatura y
-            altura más parecidas.
-          </div>
-          <select name="ciudad">
-            <option value="hermosillo">Hermosillo</option>
-            <option value="obregon">Obregón</option>
-          </select>
-        </div>
-      </div>
-      <div class="division dos">
-        <div class="numero">2</div>
-        <div class="label-container">
-          <div class="label">
-            <b>¿Hacia donde esta orientada la fachada?</b> <br />
-            Al pararte en la puerta principal, con la casa en la espalda, ¿hacia
-            donde estas viendo?
-          </div>
-          <select id="sOrientacion">
-            <option value="0">Norte</option>
-            <option value="1">Sur</option>
-            <option value="2">Este</option>
-            <option value="3">Oeste</option>
-          </select>
-          <br />
-          <div class="label">
-            <b>¿Su vivienda es de 1 o 2 pisos?</b>
-          </div>
-          <select id="sNiveles">
-            <option value="1">1</option>
-            <option value="2">2</option>
-          </select>
-          <br />
-          <div class="label">
-            <b>¿De qué material son los muros de su vivienda?</b>
-          </div>
-          <select id="sMurosMaterial">
-            <option value="0">Block de Cemento</option>
-            <option value="1">Ladrillo</option>
-          </select>
-          <br />
-          <div class="label">
-            <b>¿De qué material es el techo de su vivienda?</b>
-          </div>
-          <select id="sTechoMaterial">
-            <option value="0">Losa de Concreto</option>
-            <option value="1">Vigueta y Bovedilla</option>
-            <option value="2">Nervada (casetón)</option>
-          </select>
-          <br />
-        </div>
-        <div class="casa casa01"></div>
-      </div>
-      <div class="division">
-        <div class="numero">3</div>
-        <div class="label-container">
-          <p>
-            Para facilitar el método de análisis es necesario suponer la
-            geometría de la vivienda como rectangular. Mide el ancho y la
-            profundidad de tu casa sin tomar en cuenta desfases y salientes.
-          </p>
-          <div class="label">
-            <b>¿Cuál es el ancho del frente (A)?</b>
-          </div>
-          <input type="text" /> <b>Metros</b><br />
-          <div class="label">
-            <b>¿Cuál es la profundidad (L)?</b>
-          </div>
-          <input type="text" /> <b>Metros</b>
-        </div>
-        <div class="casa casa02"></div>
-      </div>
-      <div class="division cuatro">
-        <div class="numero">4</div>
-        <div class="label-container">
-          <p>
-            <b
-              >Seleccione la cantidad de puertas y ventanas que hay en cada uno
-              de los muros exteriores de su vivienda.</b
-            >
-            <br />Hemos calculado una medida estándar para las puertas y
-            ventanas.
-          </p>
-        </div>
-        <div class="casa casa03">
-          <div class="label top left">
-            <span>Puertas</span> <input type="text" /><br />
-            <span>Ventanas</span> <input type="text" />
-          </div>
-          <div class="label top right">
-            <span>Puertas</span> <input type="text" /><br />
-            <span>Ventanas</span> <input type="text" />
-          </div>
-          <div class="label bottom left">
-            <span>Puertas</span> <input type="text" /><br />
-            <span>Ventanas</span> <input type="text" />
-          </div>
-          <div class="label bottom right">
-            <span>Puertas</span> <input type="text" /><br />
-            <span>Ventanas</span> <input type="text" />
-          </div>
-        </div>
-      </div>
-      <div class="division">
-        <p>
-          Para un número más exacto, te recomendamos contactar a uno de nuestros
-          asesores quien podrá calcular el ahorro e inclusive hacerte
-          recomendaciones sobre qué productos utilizar.
-        </p>
-        <input
-          type="button"
-          id="btnCalcular"
-          name="btnCalcular"
-          value="Calcular"
-          class="btn-calculadora btn-orange"
-        />
-        <input
-          type="button"
-          id="btnReiniciar"
-          name="btnReiniciar"
-          value="Reiniciar"
-          class="btn-calculadora btn-grey"
-        />
-      </div>
-    </div>
 
-    <footer></footer>
-    <script
-      data-tenanUUID="f50c4a33"
-      src="https://widget.conversso.com/widgetInjector.js"
-    ></script>
+      <div class="wrapper calculadora-resultados" id="resultados" style="display:none">
+          <div class="calculadora-top">
+              <div class="calculadora-top-text">
+                  <h1 class="blue">
+                      Calcula <br />tu ahorro
+                  </h1>
+                  <p>Calcular el ahorro energético que tendrá una vivienda depende de multiples factores, en FANOSA® hemos diseñado una calculadora que te dará un número aproximado del ahorro energético que podrás tener si haces tu proyecto con el aislamiento térmico que brindan nuestros productos.</p>
+              </div>              
+          </div>
+          <div class="division">
+              <div class="explicacion">
+                  El siguiente cálculo fue realizado considerando los datos climáticos
+                  promedio de <span id="ciudad_span"></span>, Considerando un área de: largo x ancho = <span id="area_span"></span> m<sup>2</sup> con puertas y ventanas estándar,
+                  Ailamiento de 2” en techos y de 2” en muros de EPS. Considerando un consumo del 50% del
+                  gasto eléctrico en aire acondicionado (A/C). Los resultados son aproximados e ilustrativos,
+                  FANOSA® no se hace responsable por el uso que se le dé a los mismos.
+              </div>
+              <div class="resultado">
+                  <span class="orange">Con Aislante <br />Térmico en muros</span>
+                  Entrará:
+                  <h2 class="blue">
+                      <span id="dMuro"></span>
+                  </h2>
+                  Calor a tu casa. <br />
+                  Podrías ahorrar en electricidad hasta:
+                  <h2 class="orange">
+                      <span id="dMuroAhorro"></span>
+                  </h2>
+              </div>
+              <div class="resultado">
+                  <span class="orange">Con Aislante <br />Térmico en techo</span>
+                  Entrará:
+                  <h2 class="blue">
+                      <span id="dTecho"></span>
+                  </h2>
+                  Calor a tu casa. <br />
+                  Podrías ahorrar en electricidad hasta:
+                  <h2 class="orange">
+                      <span id="dTechoAhorro"></span>
+                  </h2>
+              </div>
+              <div class="resultado">
+                  <span class="orange">Con Aislante Térmico <br />en muros y techo</span>
+                  Entrará:
+                  <h2 class="blue">
+                      <span id="dMuroTecho"></span>
+                  </h2>
+                  Calor a tu casa. <br />
+                  Podrías ahorrar en electricidad hasta:
+                  <h2 class="orange">
+                      <span id="dMuroTechoAhorro"></span>
+                  </h2>
+              </div>
+          </div>
+          <div class="division final">
+              <div class="calculadora-graficas">
+                  <b>Ejemplo de consumo en energía eléctrica:</b>
+                  <div class="iconos-resultados">
+                      <p>Consumo eléctrico promedio sin aislante térmico.</p>
+                      <img src="images/calculadora-iconos-top.svg"
+                           alt="Resultados sin aislar" />
+                  </div>
+                  <div class="iconos-resultados">
+                      <p>
+                          Consumo eléctrico promedio con aislante térmico en muros y techo.
+                      </p>
+                      <div class="iconos-aislar-img">
+                          <img src="images/calculadora-iconos-bottom.svg"
+                               alt="Resultados aislando" />
+                          <div class="pct" id="pct-gasto">15%</div>
+                          <div class="pct" id="pct-ahorro">35%</div>
+                      </div>
+                  </div>
+              </div>
+              <h3 class="orange">¿Qué significa esto?</h3>
+              <p>
+                  Entre más aislada esté tu casa, menos será el calor que entra y el
+                  frío que sale de ella, lo que significa que gastas menos electricidad
+                  en enfriarla en verano y calentarla en invierno. Generalmente el 50%
+                  del gasto eléctrico en verano es el consumo del aire acondicionado
+                  (A/C), el resto son los electrodomésticos e iluminación que usamos día
+                  a día, entonces, para calcular el ahorro en electricidad que puedes
+                  tener aislando tu casa, consideramos un menor consumo en aire
+                  acondicionado (A/C).
+              </p>
+              <input type="button"
+                     id="btnReiniciar2"
+                     name="btnReiniciar2"
+                     value="Reiniciar"
+                     class="btn-grey" />
+          </div>
+      </div>
+
+      <footer></footer>
+      <script data-tenanUUID="f50c4a33"
+              src="https://widget.conversso.com/widgetInjector.js"></script>
   </body>
 </html>

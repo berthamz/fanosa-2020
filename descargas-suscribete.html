@@ -1,32 +1,29 @@
+<script src="js/jquery.loadmask.min.js"></script>
+<link href="css/jquery.loadmask.css" rel="stylesheet" />
 <div class="overlay-form-text">
-  <h2>SUSCRÍBETE A NUESTRO BOLETÍN</h2>
-  <p>Recibe las últimas noticias de FANOSA® en tu correo electrónico.</p>
+    <h2>SUSCRÍBETE A NUESTRO BOLETÍN</h2>
+    <p>Recibe las últimas noticias de FANOSA® en tu correo electrónico.</p>
 </div>
-<form action="#" class="suscribete">
-  <input
-    type="text"
-    id="descargas-module-name"
-    class="descargas-module-input"
-    placeholder="Nombre*"
-  />
-  <input
-    type="email"
-    name="email"
-    id="descargas-module-email"
-    class="descargas-module-input"
-    placeholder="Correo*"
-  />
-  <span class="descargas-module-privacidad">
-    <input type="checkbox" name="privacidad" id="descargas-privacidad" />
-    Acepto
-    <a href="privacidad.html" target="_blank"
-      >política <br />
-      de privacidad</a
-    >.
-  </span>
-  <input
-    type="submit"
-    value="Enviar"
-    class="btn-orange descargas-module-send"
-  />
+<form action="#" class="suscribete" id="forma-suscribete">
+    <input type="text"
+           id="descargas-module-name"
+           class="descargas-module-input"
+           placeholder="Nombre*" />
+    <input type="email"
+           name="email"
+           id="descargas-module-email"
+           class="descargas-module-input"
+           placeholder="Correo*" />
+    <span class="descargas-module-privacidad">
+        <input type="checkbox" name="privacidad" id="descargas-privacidad" />
+        Acepto
+        <a href="privacidad.html" target="_blank">
+            política <br />
+            de privacidad
+        </a>.
+    </span>
+    <input type="button"
+           value="Enviar"
+           class="btn-orange descargas-module-send"
+           onclick="EnviaCorreoBoletin(0)" />
 </form>

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="css/main.css" />
     <script type="text/javascript" src="js/jquery-3.5.0.min.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
+    <script src="js/jquery.loadmask.min.js"></script>
+    <link href="css/jquery.loadmask.css" rel="stylesheet" />
     <meta property="og:title" content="FANOSA®" />
     <meta
       property="og:description"
@@ -88,7 +90,7 @@
           </p>
         </div>
 
-        <div class="bloque-half">
+        <div class="bloque-half" id="forma-transparencia">
           <form action="" class="info-forma">
             <textarea
               name="comentarios"
@@ -123,13 +125,12 @@
               ><input
                 type="checkbox"
                 name="privacidad"
-                id="checkbox-privacidad"
+                id="privacidad"
               />
               Acepto las
               <a href="privacidad.html">Políticas de Privacidad</a></span
             >
-            <input type="submit" value="Enviar" class="btn-orange" />
-            <!-- NOTA: ENVIAR CORREO A transparencia@fanosa.com-->
+            <input type="button" id="boton_transparencia" value="Enviar" class="btn-orange" onclick="EnviaCorreoTransparencia(0)" />            
           </form>
         </div>
       </div>

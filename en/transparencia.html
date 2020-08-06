@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
@@ -7,8 +7,7 @@
     <meta
       name="description"
       content="Leading company in the manufacture of Expanded Polystyrene (EPS) products."
-    />
-    hola
+    />    
     <meta
       name="keywords"
       content="panel w, sistema constructivo, vigueta y bovedilla, viguetas y bovedillas, venta de panel, bovedilla de poliestireno, cuarto frio, aislantes termicos, losa de vigueta y bovedilla, caseton de poliestireno, precio de viguetas, venta de materiales para construccion, muros prefabricados, vigueta y bovedilla de poliestireno, concreto ligero, sistemas constructivos modernos, losas aligeradas, bloques de poliestireno, sistemas prefabricados, aislamiento termico para techos, construccion de muros, aligerante para concreto, caseton poliestireno, sistemas constructivos de losas, fabrica de poliestireno, aislantes termicos para techos, aislante termico para paredes, perla aligerante, perla para concreto, techos prefabricados ligeros, precio"
@@ -17,6 +16,8 @@
     <link rel="stylesheet" href="../css/main.css" />
     <script type="text/javascript" src="../js/jquery-3.5.0.min.js"></script>
     <script type="text/javascript" src="../js/main.js"></script>
+    <script src="../js/jquery.loadmask.min.js"></script>
+    <link href="../css/jquery.loadmask.css" rel="stylesheet" />
     <meta property="og:title" content="FANOSA®" />
     <meta
       property="og:description"
@@ -53,7 +54,7 @@
     </div>
 
     <div class="wrapper">
-      <div class="bloque-info-forma transparencia">
+      <div class="bloque-info-forma transparencia" id="forma-transparencia">
         <div class="bloque-half">
           <p>
             Seeking to improve the quality of its processes, FANOSA® offers you
@@ -119,12 +120,12 @@
               ><input
                 type="checkbox"
                 name="privacidad"
-                id="checkbox-privacidad"
+                id="privacidad"
               />
               I accept the
               <a href="privacidad.html">Privacy Policies</a></span
             >
-            <input type="submit" value="Send" class="btn-orange" />
+            <input type="button" value="Send" class="btn-orange" onclick="EnviaCorreoTransparencia(1)" />
           </form>
         </div>
       </div>
